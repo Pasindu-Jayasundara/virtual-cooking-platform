@@ -1,0 +1,443 @@
+:root{
+    --font-family: "Arial";
+    --navbar-font-size:16px;
+    --search-icon-size:23px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+/* header */
+.container{
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+header{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.764);
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+.logo-and-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    background-image: url('../resources/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    aspect-ratio: 1/1;
+    /* background-color: blue; */
+    border-radius: 50%;
+}
+.website-name{
+    text-wrap: nowrap;
+    margin-left: 8px;
+    font-family: var(--font-family);
+    color: rgb(255, 169, 11);
+}
+nav{
+    /* background-color: #008000; */
+    width: 100%; 
+}
+nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+nav>ul>li{
+    color: white;
+    list-style: none;
+    margin-left: 37px;
+    font-size: var(--navbar-font-size);
+    font-family: var(--font-family);
+    letter-spacing: 1.5px;
+    transition-duration: .8s;
+    cursor: pointer;
+}
+nav>ul>li:hover{
+    color: rgb(255, 192, 3) ;
+}
+.profile-and-search{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search-icon{
+    font-size: var(--search-icon-size);
+    color: rgb(247, 169, 0);
+    cursor: pointer;
+}
+.search-input{
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border:1px solid rgba(128, 128, 128, 0.748);
+    display: none;
+}
+.button-and-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.my-account{
+    text-wrap: nowrap;
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(168, 110, 2);
+    padding-block: 10px;
+    padding-inline: 13px;
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+.profile-btn{
+    background-image: url('../resources/images/profile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 33px;
+    aspect-ratio: 1/1;
+    /* background-color: rgb(238, 0, 255); */
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home body */
+.home-body{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* background-color: brown; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.home-body-main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../resources/images/chefs-demonstrating-cooking-skills-contest.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cover-screen-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image:linear-gradient( rgba(255, 255, 255, 0) ,rgba(0, 0, 0, 0.773));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.cover-logo{
+    background-image: url('../resources/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    aspect-ratio: 1/1;
+    /* background-color: blue; */
+    border-radius: 50%;
+    /* display: none; */
+}
+.cover-name{
+    font-size: 50px;
+    color: orange;
+    font-weight: bold;
+    font-family: "PT Sans", sans-serif;
+    margin-top: 30px;
+    letter-spacing: 1.5px;
+    word-spacing: 10px;
+    /* display: none; */
+}
+.cover-desc{
+    color: white;
+    font-size: 17px;
+    margin-top: 30px;
+    font-style: italic;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    word-spacing: 9px;
+    width: 70vw;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: none; */
+}
+.trending-card{
+    width: 250px;
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+    margin-top: 80px;
+}
+
+.cover-screen-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image:linear-gradient( rgba(255, 255, 255, 0) ,rgba(0, 0, 0, 0.773));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* display: none; */
+}
+.countdown{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(163, 108, 6);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.video{
+    width: 100%;
+    height:200px;
+    /* background-color: red; */
+    background-image: url('../resources/food/food.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.outer-ring{
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 20%;
+    background-color: rgba(114, 114, 114, 0.504);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-ring{
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 20%;
+    background-color: rgba(174, 174, 174, 0.504);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-button{
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-left:10px solid rgb(255, 255, 255); 
+}
+.card-footer{
+    display: flex;
+    flex-direction: column;
+}
+.food-name{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.get-offer-btn-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.get-offer-btn-div>button{
+    padding-inline: 15px;
+    padding-block: 10px;
+    outline: none;
+    border: none;
+    background-color: orange;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.desc{
+    width: 50vw;
+    height: 50vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+.premium,.world{
+    color: orange;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.world{
+    color: white;
+    font-size: 70px;
+}
+.btn-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 60px;
+}
+.cook-btn{
+    padding-inline: 20px;
+    padding-block: 15px;
+    outline: none;
+    border: none;
+    background-color: rgb(220, 143, 1);
+    margin-right: 20px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* second section , fourth section*/
+.fourth-section,
+.second-section{
+    width: 100%;
+    min-height: 90vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 50px;
+}
+.ss-first-div{
+    display: flex;
+    flex-direction: column;
+    width:70vw;
+    margin-left: 100px;
+}
+.online-class{
+    color: rgb(106, 106, 106);
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+.ss-image-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100%;
+    padding-left: 110px;
+}
+.ss-image{
+    background-image: url('../resources/images/profile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 28vw;
+    aspect-ratio: 1/1;
+}
+.learn{
+    font-size: 60px;
+    width: 40vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.learn-desc{
+    width: 40vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    word-spacing: 5px;
+    margin-bottom: 50px;
+}
+.get-started>button{
+    padding-inline: 25px;
+    padding-block: 15px;
+    outline: none;
+    border: none;
+    background-color: rgb(165, 107, 0);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1.4px;
+    word-spacing: 5px;
+}
+.ts-image-div{
+    /* background-color: red; */
+    width: fit-content;
+}
+
+
+
+/* third section */
+.third-section{
+    width: 100%;
+    min-height: 90vh;
+    background-color: rgba(0, 0, 0, 0.586);
+    backdrop-filter: 5px;
+}
+.ts-bg-image{
+    
+}
