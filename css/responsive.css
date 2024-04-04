@@ -1,0 +1,196 @@
+@media (max-width: 576px) {
+  header > nav,
+  .search-btn,
+  .button-and-profile,
+  .trending-card,
+  .ss-image-div,
+  .ts-image-div,
+  .cover-screen-1 {
+    display: none;
+  }
+  header {
+    display: flex;
+  }
+  .menu-icon {
+    color: rgba(255, 255, 255, 0.59);
+    font-size: 30px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  .menu-icon:hover {
+    color: #fff;
+  }
+  .menu-icon-close {
+    display: none;
+  }
+  .cover-screen-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .desc {
+    width: 96%;
+  }
+  .premium {
+    font-size: 20px;
+    text-align: center;
+  }
+  .world {
+    font-size: 40px;
+    text-align: center;
+  }
+  .cover-screen-2 {
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0) 10%,
+      rgba(0, 0, 0, 0.773) 90%
+    );
+  }
+  .btn-group {
+    justify-content: center;
+  }
+  .small-menu-display {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000dc;
+    backdrop-filter: blur(80px);
+    z-index: 100;
+    padding-top: 50px;
+    transition-duration: 0.5s;
+    z-index: -1;
+  }
+  .small-menu-display > nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 80px;
+    line-height: 50px;
+  }
+  .small-menu-display > nav > ul > li {
+    font-size: 18px;
+  }
+  .small-menu-display > .profile-and-search > .button-and-profile {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  /* second section */
+  .second-section,
+  .fourth-section {
+    flex-direction: column;
+    background-color: white;
+    padding-top: 50px;
+  }
+  .ss-first-div {
+    margin-left: 0;
+    width: 100%;
+  }
+  .learn {
+    font-size: 30px;
+    width: 100%;
+  }
+  .learn-desc {
+    width: 100%;
+  }
+  .get-started {
+    margin-bottom: 50px;
+  }
+
+  /* third section */
+  .third-section {
+    min-height: 100vh;
+  }
+  .cook-them-all {
+    margin-top: 50px;
+  }
+  .easy-to-hard {
+    text-align: center;
+  }
+  .food-container {
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .food-card {
+    min-width: 250px;
+    margin-inline: 10px;
+  }
+
+  /* fifth section */
+  .fifth-section {
+    min-height: 100vh;
+  }
+  .fs-title {
+    font-size: 40px;
+  }
+  .chef-card-container {
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .chef-card {
+    min-width: 300px;
+    margin-inline: 10px;
+  }
+
+  /* sixth section */
+  .sixth-section {
+    padding-top: 50px;
+  }
+  .ss-fdiv {
+    width: 100%;
+    padding-inline: 30px;
+  }
+  .ss-image-container {
+    width: 100%;
+    overflow-x: scroll;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .ss-partner-image {
+    min-width: 150px;
+    margin-inline: 10px;
+  }
+
+  /* seventh section */
+  .seventh-section {
+    background-color: white;
+  }
+  .ss-quote-container {
+    width: 100%;
+    padding-inline: 30px;
+    margin-bottom: 30px;
+    margin-top: -130px;
+  }
+
+  /* footer */
+  .footer-inner-container {
+    flex-direction: column;
+    padding-top: 50px;
+    width: 100%;
+  }
+  .footer-logo {
+    margin-bottom: 50px;
+  }
+  .footer-desc {
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .footer-nav {
+    align-items: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .small-menue-btn,
+  .small-menu-display {
+    display: none;
+  }
+}
