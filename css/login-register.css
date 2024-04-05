@@ -119,53 +119,53 @@
   color: orange;
   margin-bottom: 30px;
 }
-.login-desc{
-    font-size: 20px;
-    text-align: center;
-    line-height: 1.5;
+.login-desc {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
 }
-.register-form-container{
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color:  rgba(0, 0, 0, 0.278);
-padding: 0;
+.register-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.278);
+  padding: 0;
 }
-.register-heading{
+.register-heading {
   width: 100%;
   text-align: center;
 }
-.register-container{
-  background-image: url('../resources/images/c6.png');
+.register-container {
+  background-image: url("../resources/images/c6.png");
 }
 
-@media (max-width:576px) {
-    .login-container{
-        flex-direction: column;
-    }
-    .login-container-wrapper{
-        flex-direction: column;
-    }
-    .login-desc-container{
-        display: none;
-    }
-    .login-form-container{
-        width: 100%;
-        padding-left: 15px;
-    }
-    .register-redirect{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-    .login_txt_heading{
-        text-align: center;
-    }
+@media (max-width: 576px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .login-container-wrapper {
+    flex-direction: column;
+  }
+  .login-desc-container {
+    display: none;
+  }
+  .login-form-container {
+    width: 100%;
+    padding-left: 15px;
+  }
+  .register-redirect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .login_txt_heading {
+    text-align: center;
+  }
 
-    .register-heading{
-      font-size: 25px;
-    }
+  .register-heading {
+    font-size: 25px;
+  }
 }
