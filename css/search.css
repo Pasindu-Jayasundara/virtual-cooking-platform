@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.search-left-bar {
+  width: 15%;
+  height: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search-left-bar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+.search-input-div {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 120px;
+}
+.search-input-search {
+  width: 100%;
+  height: 30px;
+  border: 1px solid orange;
+  outline: none;
+  padding-left: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.search-icon-search {
+  background-color: orange;
+  color: white;
+  padding-block: 6px;
+  padding-inline: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.search-sort-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.sort-by-text {
+  font-size: 15px;
+  margin-bottom: 8px;
+  align-self: flex-start;
+  font-weight: bold;
+}
+.search-hr {
+  background-color: grey;
+  width: 90%;
+  margin-bottom: 8px;
+}
+.search-hr-2 {
+  margin-bottom: 28px;
+}
+.search-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 70%;
+  padding-left: 15px;
+}
+.sort-option-text {
+  font-size: 15px;
+  width: 100%;
+}
+.search-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85%;
+  height: 100%;
+  padding: 20px;
+  max-height: 100vh;
+  overflow-y: scroll;
+  padding-top: 110px;
+  background-image: url("../resources/images/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.search-display-cover {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  padding-inline: 50px;
+  padding-top: 107px;
+}
+.search-display-section {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.search-display-section-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px;
+  width: inherit;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  padding-inline: 15px;
+  padding-block: 11px;
+  border-radius: 5px;
+  background-color: #9f9f9f;
+}
+.search-display-section-body {
+  width: 105%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: fit-content;
+  padding-block: 20px;
+  flex-wrap: wrap;
+  padding-left: 50px;
+}
+.search-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  /* border: 1px solid rgb(214, 214, 214); */
+  margin-inline: 20px;
+  margin-block: 20px;
+}
+.search-card-head {
+  height: 170px;
+  width: 250px;
+  background-image: url("../resources/images/p2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.search-card-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.search-card-body-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.search-card-body-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.search-card-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+.search-card-city {
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(107, 107, 107);
+}
+.search-card-price {
+  font-size: 17px;
+  font-weight: bold;
+  color: orange;
+}
+.search-card-by {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.search-card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.search-card-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  color: white;
+  padding-block: 5px;
+  border-radius: 2px;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+.search-card-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(92, 92, 92);
+  color: white;
+  padding-block: 5px;
+  border-radius: 2px;
+  font-size: 14px;
+  flex-grow: 1;
+}
+.min-search-input-div{
+    display: none;
+}
+
+
+@media (max-width:576px) {
+    .search-display-cover{
+        backdrop-filter: blur(5px);
+        min-height: fit-content;
+    }
+    .min-search-input-div{
+        display: flex;
+        background-color: red;
+    }
+    .search-input-div{
+        top: 0;
+        width: 100%;
+    }
+    .search-input-search{
+        height: 40px;
+    }
+    .search-icon-search{
+        padding-block: 11px;
+    }
+    .search-left-bar{
+        display: none;
+    }
+    .search-display{
+        width: 100%;
+    }
+    .search-display-section{
+        margin: 0;
+        min-width: 100%;
+    }
+    .search-display-section-title{
+        display: none;
+    }
+    .search-display-section-body{
+        width: 100%;
+        padding-left: 0;
+        margin-top: -25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    .search-card{
+        margin-left: 0;
+    }
+}
