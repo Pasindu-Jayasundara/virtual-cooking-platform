@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("\pexels-chan-walrus-958545.jpg");
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+.main_Container {
+    /*Middle part of web page*/
+    width: 50%;
+    height: 90%;
+    padding: 1% 1% 2% 2%;
+    text-align: center;
+    /* border: 10px solid white; */
+}
+
+#search_txtBox {
+    width: 80%;
+    font-size: large;
+    border: none;
+    padding: 2% 3% 2% 3%;
+    border-radius: 12px;
+    box-shadow: 6px 6px 6px rgb(55, 55, 55);
+}
+
+#search_txtBox_area {
+    padding-bottom: 2%;
+}
+
+.search_suggestion {
+    width: 90%;
+    height: 200px;
+    background-color: rgba(176, 176, 176, 0.75);
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px rgb(55, 55, 55);
+}
+
+#search_suggestion_area {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    /* grid-template-rows: repeat(3, 3fr); */
+    grid-row-gap: 2%;
+    height: fit-content;
+    
+}

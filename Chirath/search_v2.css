@@ -1,0 +1,70 @@
+*{
+    font-size: 15pt;
+}
+body{
+    background-image: url(pexels-chan-walrus-958545.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.main_division{
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    box-shadow: 4px 4px 15px black;
+}
+.search_txt_box{
+    width: 50%;
+    margin-top: 4%;
+    border-radius: 7px;
+    border: none;
+    padding: 1% 2% 1% 2%;
+    margin-bottom: 2%;
+    box-shadow: 4px 4px 15px black;
+}
+.search_suggestion_container_parent{
+    display: flex;
+    justify-content: center;
+    height: 83%;
+    /* border: 3px solid rgb(255, 0, 238);   */
+}
+.search_suggestion_container{
+    /* border: 3px solid cyan;  */
+    height: 97%;
+    width: 90%;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 3fr);
+    align-items: center;
+    text-align: center;
+    padding-left: 2%;
+    column-gap: none;
+}
+.suggestions{
+    border: 1px solid white;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 15px;
+    width: 95%;
+    height: 90%;
+    color: aliceblue;
+    
+}
+#search{
+    padding: 1% 2% 1% 2%;
+    border: none;
+    border-radius: 7px;
+    font-size: 15pt;
+    font-weight: bold;
+    margin-left: 10px;
+    box-shadow: 0px 5px 10px darkgoldenrod;
+}
+#search:hover{
+    background-color: rgb(219, 161, 14);
+    color: white;
+    box-shadow: 0px 5px 10px gray;
+    transition-duration: .4s;
+}

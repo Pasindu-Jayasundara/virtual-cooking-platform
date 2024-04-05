@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login | Website Name</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="./css/register.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-and-name">
+            <div class="logo"></div>
+            <span class="website-name">Website name</span>
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Trending</li>
+                <li>Subscription</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div class="profile-and-search">
+            <div class="search-btn">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="search-input" />
+            </div>
+            <div class="button-and-profile">
+                <span class="my-account">My Account</span>
+                <div class="profile-btn"></div>
+            </div>
+            <div class="small-menue-btn">
+                <i class="bi bi-list menu-icon" id="menu-icon" onclick="smallMenu();"></i>
+                <i class="bi bi-x menu-icon menu-icon-close" id="menu-icon-close" onclick="smallMenu();"></i>
+            </div>
+        </div>
+        <div class="small-menu-display" id="small-menu">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Trending</li>
+                    <li>Subscription</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav>
+            <div class="profile-and-search">
+                <div class="search-btn">
+                    <i class="bi bi-search search-icon"></i>
+                    <input type="text" class="search-input" />
+                </div>
+                <div class="button-and-profile">
+                    <span class="my-account">My Account</span>
+                    <div class="profile-btn"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="login_container" class="login-container">
+        <div class="login-container-wrapper">
+
+            <div class="login-form-container">
+
+                <div class="login_txt_heading">My Account</div>
+                <div class="login_txtBox_area">
+
+                    <div class="login-input-wrapper">
+                        <label class="login-label" for="login_uname">Email Address</label>
+                        <input type="text" placeholder="user@gmail.com" id="login_uname" class="input">
+                    </div>
+
+                    <div class="login-input-wrapper">
+                        <label class="login-label" for="login_pass">Password</label>
+                        <input type="password" placeholder="Password" id="login_pass" class="input">
+                    </div>
+
+                    <div class="login-input-wrapper login-btn-div">
+                        <div type="button" class="login-btn" id="login_submit_btn">LogIn</div>
+                    </div>
+
+                    <div class="register-redirect">
+                        I do not have an account : <a href="register.html" id="directTo_register_Page_btn">Create an
+                            Account</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="login-desc-container">
+                <div class="login-desc-title">World's Best Teaching</div>
+                <div class="login-desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam vel eos nisi asperiores, suscipit
+                    nulla iste corporis, quidem, rem neque ad? Sequi deserunt voluptatem molestias soluta, itaque
+                    maiores distinctio dolore!
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-inner-container">
+                <div class="footer-logo"></div>
+                <div class="footer-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam temporibus optio voluptate, ex
+                    tenetur animi quas vitae molestias, sunt quia sequi autem eaque possimus quasi! Cum minus ea
+                    illo impedit!
+                </div>
+                <ul class="footer-nav">
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Locaation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end">
+            <hr class="footer-hr">
+            <div class="copyright">© 2024 Website Name. All rights reserved</div>
+        </div>
+    </footer>
+
+    <script src="./js/header.js"></script>
+</body>
+
+</html>

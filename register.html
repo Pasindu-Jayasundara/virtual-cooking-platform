@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".close_btn").click(function(){
+                window.location.href = "login.html";
+            });
+        });
+
+    </script>
+</head>
+
+<body> 
+    <div id="reg_container">
+        <div class="close_btn">&times;</div>
+        <h1 class="register_txt_heading">Register</h1>
+        <div class="reg_txtBox_area">
+            <label for="reg_uname">User Name</label><br>
+            <input type="text" placeholder="User Name" id="reg_uname"><br><br>
+
+            <label for="reg_email">E-mail</label><br>
+            <input type="text" placeholder="email@address.com" id="reg_email"><br><br>
+
+            <label for="reg_pass">Password</label><br>
+            <input type="password" placeholder="Password" id="reg_pass"> <br><br>
+
+            <label for="confirm_reg_pass">Confirm Password</label><br>
+            <input type="password" placeholder="Password" id="confirm_reg_pass"><br><br>
+
+            <input type="button" value="Register" id="register_submit_btn">
+            
+        </div>
+    </div>
+</body>
+
+</html>
