@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Website Name</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="./css/faq.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-and-name">
+            <div class="logo"></div>
+            <span class="website-name">Website name</span>
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Trending</li>
+                <li>Subscription</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div class="profile-and-search">
+            <div class="search-btn">
+                <i class="bi bi-search search-icon" onclick="window.location='search.html';"></i>
+                <input type="text" class="search-input" />
+            </div>
+            <div class="button-and-profile">
+                <span class="my-account" onclick="window.location='login.html';">My Account</span>
+                <div class="profile-btn"></div>
+            </div>
+            <div class="small-menue-btn">
+                <i class="bi bi-list menu-icon" id="menu-icon" onclick="smallMenu();"></i>
+                <i class="bi bi-x menu-icon menu-icon-close" id="menu-icon-close" onclick="smallMenu();"></i>
+            </div>
+        </div>
+        <div class="small-menu-display" id="small-menu">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Trending</li>
+                    <li>Subscription</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav>
+            <div class="profile-and-search">
+                <div class="search-btn">
+                    <i class="bi bi-search search-icon" onclick="window.location='search.html';"></i>
+                    <input type="text" class="search-input" />
+                </div>
+                <div class="button-and-profile">
+                    <span class="my-account" onclick="window.location='login.html';">My Account</span>
+                    <div class="profile-btn"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="faq-container">
+        <main class="faq-main">
+            <div class="faq-cover">
+                <div class="faq-help"># How can we help you</div>
+                <div class="faq-cover-text">FAQ</div>
+            </div>
+        </main>
+        <section class="faq-section">
+
+            <div class="faq-accordian-container">
+                <button class="faq-accordion" onclick="changeShow(1);">Section 1 <i class="bi bi-plus faq-plus"
+                        id="faq-plus-btn-1"></i></button>
+                <div class="faq-accordian-panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordian-container">
+                <button class="faq-accordion" onclick="changeShow(2);">Section 1 <i class="bi bi-plus faq-plus"
+                        id="faq-plus-btn-2"></i></button>
+                <div class="faq-accordian-panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordian-container">
+                <button class="faq-accordion" onclick="changeShow(3);">Section 1 <i class="bi bi-plus faq-plus"
+                        id="faq-plus-btn-3"></i></button>
+                <div class="faq-accordian-panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-inner-container">
+                <div class="footer-logo"></div>
+                <div class="footer-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam temporibus optio voluptate, ex
+                    tenetur animi quas vitae molestias, sunt quia sequi autem eaque possimus quasi! Cum minus ea
+                    illo impedit!
+                </div>
+                <ul class="footer-nav">
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Locaation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end">
+            <hr class="footer-hr">
+            <div class="copyright">© 2024 Website Name. All rights reserved</div>
+        </div>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("faq-accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+        function changeShow(id) {
+            if (document.getElementById("faq-plus-btn-" + id).classList.contains("bi-dash")) {
+                document.getElementById("faq-plus-btn-" + id).classList.replace("bi-dash", "bi-plus");
+            } else {
+                document.getElementById("faq-plus-btn-" + id).classList.replace("bi-plus", "bi-dash");
+            }
+        }
+    </script>
+</body>
+
+</html>
