@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.contact-main {
+  width: 100%;
+  min-height: 60%;
+  position: relative;
+  background-image: url("../resources/images/con12.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.contact-cover {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.582);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-cover-text {
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-top: 50px;
+}
+.contact-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+.contact-form-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.contact-form-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.contact-form-title {
+  font-size: 23px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.contact-hr {
+  width: 50px;
+  background-color: rgb(0, 0, 0);
+  height: 3px;
+  margin-block: 20px;
+}
+.contact-desc {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  line-height: 26px;
+}
+.contact-field-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.contact-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.contact-form-label {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contact-form-input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 15px;
+  outline: none;
+}
+.contact-textarea {
+  padding-inline: 10px;
+  height: 170px;
+}
+.contact-btn {
+  padding-inline: 50px;
+  padding-block: 10px;
+  background-color: rgb(255, 132, 0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-details-container {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(189, 189, 189);
+  padding-inline: 15px;
+  margin-top: 30px;
+  margin-left: 70px;
+}
+.contact-details-title {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.contact-details {
+  width: 100%;
+  text-align: left;
+  line-height: 23px;
+  font-size: 15px;
+}
+.socialMedia {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.socialMedia-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  padding-inline: 10px;
+}
+.socialmedia-title {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .contact-cover-text {
+    font-size: 30px;
+  }
+  .contact-body {
+    background-color: white;
+    flex-direction: column;
+    height: 250%;
+  }
+  .contact-form-container {
+    width: 100%;
+    padding-inline: 20px;
+  }
+  .contact-desc {
+    margin-block: 40px;
+    line-height: 27px;
+  }
+  .contact-field-container {
+    margin-top: 20px;
+  }
+  .contact-field-container {
+    margin-bottom: 40px;
+  }
+  .contact-details-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .contact-details-container {
+    border: none;
+  }
+}
