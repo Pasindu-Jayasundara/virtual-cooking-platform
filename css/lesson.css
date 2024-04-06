@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.lesson-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.lessons-left-panel {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 108px;
+  padding-inline: 20px;
+}
+.lesson-video {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lesson-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.lesson-detail-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lesson-name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 23px;
+  font-weight: bold;
+  color: rgb(114, 74, 0);
+  margin-top: 20px;
+}
+.lesson-desc {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 25px;
+  line-height: 25px;
+  padding-right: 130px;
+}
+.lesson-by {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 10px;
+  color: rgb(127, 83, 0);
+  text-wrap: nowrap;
+}
+.lesson-comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.lesson-comment-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(114, 74, 0);
+  margin-bottom: 20px;
+}
+.lesson-comment-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.lesson-comment {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+.lesson-comment-user-image {
+  width: 80px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-image: url("../resources/images/b.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lesson-name-and-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.lesson-comment-user-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.lesson-comment-user-comment {
+  font-size: 15px;
+  line-height: 26px;
+  width: 50%;
+}
+.lesson-right-panel {
+  width: 20%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 108px;
+  align-items: center;
+  padding-top: 20px;
+}
+.lesson-suggest-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.lesson-suggest-1-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.suggest-lesson-image {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-image: url("../resources/images/b.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.suggest-lesson-name {
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(68, 68, 68);
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+@media (max-width: 576px) {
+  .lesson-container {
+    flex-direction: column;
+    background-color: #ffffff;
+  }
+  .lessons-left-panel {
+    width: 100%;
+  }
+  .lesson-details {
+    flex-direction: column;
+  }
+  .lesson-desc {
+    width: 100%;
+    padding: 0;
+  }
+  .lesson-by {
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+  }
+  .lesson-comments {
+    margin-top: 80px;
+  }
+  .lesson-comment-container {
+    width: 100%;
+    padding: 0;
+    margin-top: 13px;
+  }
+  .lesson-comment {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+  .lesson-comment-user-image {
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+  .lesson-name-and-comment {
+    align-items: center;
+    width: 100%;
+  }
+  .lesson-comment-user-name {
+    margin-left: -20px;
+  }
+  .lesson-comment-user-comment {
+    width: 80%;
+    text-align: center;
+  }
+  .lesson-right-panel {
+    display: none;
+  }
+}

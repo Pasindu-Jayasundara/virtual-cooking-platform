@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson | Website Name</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="stylesheet" href="./css/lesson.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-and-name">
+            <div class="logo"></div>
+            <span class="website-name">Website name</span>
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Trending</li>
+                <li>Subscription</li>
+                <li>Contact Us</li>
+                <li onclick="window.location='chef.html';">Chefs</li>
+            </ul>
+        </nav>
+        <div class="profile-and-search">
+            <div class="search-btn">
+                <i class="bi bi-search search-icon" onclick="window.location='search.html';"></i>
+                <input type="text" class="search-input" />
+            </div>
+            <div class="button-and-profile">
+                <span class="my-account" onclick="window.location='login.html';">My Account</span>
+                <div class="profile-btn"></div>
+            </div>
+            <div class="small-menue-btn">
+                <i class="bi bi-list menu-icon" id="menu-icon" onclick="smallMenu();"></i>
+                <i class="bi bi-x menu-icon menu-icon-close" id="menu-icon-close" onclick="smallMenu();"></i>
+            </div>
+        </div>
+        <div class="small-menu-display" id="small-menu">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Trending</li>
+                    <li>Subscription</li>
+                    <li>Contact Us</li>
+                    <li onclick="window.location='chef.html';">Chefs</li>
+                </ul>
+            </nav>
+            <div class="profile-and-search">
+                <div class="search-btn">
+                    <i class="bi bi-search search-icon" onclick="window.location='search.html';"></i>
+                    <input type="text" class="search-input" />
+                </div>
+                <div class="button-and-profile">
+                    <span class="my-account" onclick="window.location='login.html';">My Account</span>
+                    <div class="profile-btn"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="lesson-container">
+
+        <div class="lessons-left-panel">
+            <iframe class="lesson-video" src="https://www.youtube.com/embed/4T7HwLGNiuw?si=rtACR2NBVM7k_pwf"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+
+            <div class="lesson-details">
+                <div class="lesson-detail-container">
+                    <div class="lesson-name">This is the lesson name</div>
+                    <div class="lesson-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At quasi tempora inventore illo, earum
+                        blanditiis voluptatibus sunt et quae quam, ea assumenda. Ratione accusantium tempora voluptas
+                        consectetur expedita voluptatem ex.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, veniam non molestias repellat
+                        ea laboriosam, neque iusto pariatur rerum vitae praesentium tempore reiciendis saepe veritatis
+                        perspiciatis voluptatum incidunt dolores. Possimus?
+                    </div>
+                </div>
+                <div class="lesson-by">by Chef Arun Handunneththi</div>
+            </div>
+            <div class="lesson-comments">
+                <div class="lesson-comment-title">Reviews</div>
+                <div class="lesson-comment-container">
+                    <div class="lesson-comment">
+                        <div class="lesson-comment-user-image"></div>
+                        <div class="lesson-name-and-comment">
+                            <div class="lesson-comment-user-name">This is user name</div>
+                            <div class="lesson-comment-user-comment">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt ipsa nam
+                                nobis doloremque numquam autem esse et perferendis saepe maxime, quas ea, assumenda
+                                accusantium officiis! Quae velit facere reiciendis?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-comment">
+                        <div class="lesson-comment-user-image"></div>
+                        <div class="lesson-name-and-comment">
+                            <div class="lesson-comment-user-name">This is user name</div>
+                            <div class="lesson-comment-user-comment">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt ipsa nam
+                                nobis doloremque numquam autem esse et perferendis saepe maxime, quas ea, assumenda
+                                accusantium officiis! Quae velit facere reiciendis?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-right-panel">
+            <div class="lesson-suggest-container">
+                <div class="lesson-suggest-1-container">
+                    <div class="suggest-lesson-image"></div>
+                    <div class="suggest-lesson-name">suggest name</div>
+                </div>
+                <div class="lesson-suggest-1-container">
+                    <div class="suggest-lesson-image"></div>
+                    <div class="suggest-lesson-name">suggest name</div>
+                </div>
+                <div class="lesson-suggest-1-container">
+                    <div class="suggest-lesson-image"></div>
+                    <div class="suggest-lesson-name">suggest name</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-inner-container">
+                <div class="footer-logo"></div>
+                <div class="footer-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam temporibus optio voluptate, ex
+                    tenetur animi quas vitae molestias, sunt quia sequi autem eaque possimus quasi! Cum minus ea
+                    illo impedit!
+                </div>
+                <ul class="footer-nav">
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Locaation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end">
+            <hr class="footer-hr">
+            <div class="copyright">© 2024 Website Name. All rights reserved</div>
+        </div>
+    </footer>
+</body>
+
+</html>
