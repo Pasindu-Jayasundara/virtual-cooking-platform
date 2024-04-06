@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tc-body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../resources/images/tc1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.tc-body-cover {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+.tc-box {
+  width: 80%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: scroll;
+  margin-top: 60px;
+}
+.tc-headding{
+    text-align: center;
+    font-size: 33px;
+    color: rgb(167, 120, 0);
+    margin-top: 20px;
+    width: 100%;
+    letter-spacing: 4px;
+    word-spacing: 7px;
+    font-weight: bold;
+}
+.tc-sec{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+.tc-sec-headding{
+    font-size: 18px;
+    color: rgb(106, 67, 0);
+    margin-top: 20px;
+    width: 100%;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.tc-sec-text{
+    font-size: 13px;
+    color: rgb(67, 67, 67);
+    margin-top: 9px;
+    width: 100%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.5;
+}
