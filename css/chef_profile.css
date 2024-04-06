@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cp-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.cp-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 115px;
+  flex-direction: column;
+}
+.cp-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  background-image: url("../resources/images/c1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+}
+.cp-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(160, 104, 0);
+}
+.cp-desc {
+  width: 50%;
+  text-align: center;
+  line-height: 26px;
+  margin-top: 20px;
+}
+.cp-tutorial-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.cp-add-new-tutorial {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.cp-new-tutorial-btn {
+  align-self: flex-end;
+  margin-right: 20px;
+  font-size: 13px;
+  color: white;
+  background-color: rgb(0, 76, 6);
+  padding-inline: 15px;
+  padding-block: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cp-new-tutorial-fileds {
+  width: 30%;
+}
+.cp-tutorial {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-inline: 20px;
+}
+.search-card {
+  border: 1px solid rgb(161, 161, 161);
+  border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .cp-container {
+    background-color: white;
+  }
+  .cp-image {
+    width: 100px;
+    height: 100px;
+    margin-left: -2px;
+  }
+  .cp-name {
+    margin-left: -5px;
+  }
+  .cp-desc {
+    width: 80%;
+  }
+  .cp-add-new-tutorial {
+    background-color: rgb(255, 255, 255);
+  }
+  .cp-new-tutorial-fileds {
+    width: 80%;
+  }
+  .cp-tutorial-container {
+    background-color: white;
+  }
+  .cp-tutorial{
+    padding-right: -50px;
+  }
+}
