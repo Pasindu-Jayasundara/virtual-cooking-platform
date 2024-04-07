@@ -91,3 +91,6 @@ function addtoCart(lessonid){
     alert("Item Added to Cart!");
 
 }
+function gotolesson(id) {
+    window.location.href = "lesson.html?tutorialId="+id;
+}
