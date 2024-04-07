@@ -97,6 +97,9 @@ body {
   border: 1px solid rgb(161, 161, 161);
   border-radius: 5px;
 }
+.cp-contact-btn{
+  cursor: pointer;
+}
 
 @media (max-width: 576px) {
   .cp-container {
