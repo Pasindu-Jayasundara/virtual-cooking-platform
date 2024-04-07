@@ -1,27 +1,27 @@
-var chefId = null;
-var chefArr=null;
+// var chefId = null;
+// var chefArr=null;
 
 window.addEventListener("load", function() {
 
     var pageUrl = window.location.href.split("/").pop();
-    if(pageUrl.split("?").length > 1) {
+    // if(pageUrl.split("?").length > 1) {
         
-        pageUrl = pageUrl.split("?")[1];
-        chefId = pageUrl.split("=")[1];
+    //     pageUrl = pageUrl.split("?")[1];
+    //     chefId = pageUrl.split("=")[1];
 
-        pageUrl = window.location.href.split("/").pop();
-        pageUrl = pageUrl.split("?")[0];
-    }
+    //     pageUrl = window.location.href.split("/").pop();
+    //     pageUrl = pageUrl.split("?")[0];
+    // }
 
     if(pageUrl!=undefined && pageUrl == "user_profile.html" || pageUrl == "chef_profile.html") {
 
-        if(chefId != null) {
+        // if(chefId != null) {
 
-            chefArr = JSON.parse(localStorage.getItem("chefs"));
-            this.document.getElementsByTagName("body")[0].style.display = "block";
-            this.document.getElementById("new_tu_btn").style.display = "none";
+        //     chefArr = JSON.parse(localStorage.getItem("chefs"));
+        //     this.document.getElementsByTagName("body")[0].style.display = "block";
+        //     this.document.getElementById("new_tu_btn").style.display = "none";
 
-        }else{
+        // }else{
             if(isLoggedIn()) {
                 this.document.getElementsByTagName("body")[0].style.display = "block";
     
@@ -31,8 +31,10 @@ window.addEventListener("load", function() {
             }else{
                 window.location.href = "login.html";
             }
-        }
+        // }
 
+    }else if(pageUrl == "lesson.html"){
+        this.window.history.back(); // no lesson id
     }
 
 });
@@ -156,3 +158,63 @@ var tutorialArr = [
     },
 ];
 localStorage.setItem("tutorials", JSON.stringify(tutorialArr));
+
+
+var reviewArray = [
+    {
+        id: 1,
+        name: 1,
+        review: "This is a great tutorial",
+        userEmail: "a@gmail.com",
+        lessonId: 1,
+    },
+    {
+        id: 2,
+        name: 1,
+        review: "This is a great tutorial",
+        userEmail: "a@gmail.com",
+        lessonId: 2,
+    },
+    {
+        id: 3,
+        name: 1,
+        review: "This is a great tutorial",
+        userEmail: "a@gmail.com",
+        lessonId: 3,
+    },
+    {
+        id: 4,
+        name: 1,
+        review: "This is a great tutorial",
+        userEmail: "a@gmail.com",
+        lessonId: 4,
+    },
+];
+localStorage.setItem("reviews", JSON.stringify(reviewArray));
+
+
+var userObj = {
+    "a@gmail.com":{
+        name: "a",
+        username: "",
+        password: "",
+        purchased_tutorials: null,
+        payment_history: null,
+        recently_accessed: null,
+        isChef: false,
+        my_tutorials: null,
+        image: "../resources/images/cheff5.png",
+    },
+    "c@gmail.com":{
+        name: "a",
+        username: "",
+        password: "",
+        purchased_tutorials: null,
+        payment_history: null,
+        recently_accessed: null,
+        isChef: false,
+        my_tutorials: null,
+        image: "../resources/images/cheff5.png",
+    },
+};
+localStorage.setItem("users", JSON.stringify(userObj));

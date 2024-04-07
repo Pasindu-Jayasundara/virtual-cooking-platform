@@ -114,7 +114,8 @@ function register() {
             description: "This is a tutorial on how to make a cake",
             chef_name: "Chef A"
           }
-        ]
+        ],
+        image: "../resources/images/cheff5.png",
       };
 
       users[email] = user;

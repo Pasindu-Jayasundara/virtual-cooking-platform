@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/responsive.css" />
 
     <link rel="stylesheet" href="./css/lesson.css" />
+
+    <script src="./js/common.js"></script>
 </head>
 
 <body>
@@ -71,7 +73,7 @@
     <div class="lesson-container">
 
         <div class="lessons-left-panel">
-            <iframe class="lesson-video" src="https://www.youtube.com/embed/4T7HwLGNiuw?si=rtACR2NBVM7k_pwf"
+            <iframe class="lesson-video" id="lesson_video_url" src="https://www.youtube.com/embed/4T7HwLGNiuw?si=rtACR2NBVM7k_pwf"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -79,8 +81,8 @@
 
             <div class="lesson-details">
                 <div class="lesson-detail-container">
-                    <div class="lesson-name">This is the lesson name</div>
-                    <div class="lesson-desc">
+                    <div class="lesson-name" id="lesson_title">This is the lesson name</div>
+                    <div class="lesson-desc" id="lesson_desc">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. At quasi tempora inventore illo, earum
                         blanditiis voluptatibus sunt et quae quam, ea assumenda. Ratione accusantium tempora voluptas
                         consectetur expedita voluptatem ex.
@@ -89,12 +91,12 @@
                         perspiciatis voluptatum incidunt dolores. Possimus?
                     </div>
                 </div>
-                <div class="lesson-by">by Chef Arun Handunneththi</div>
+                <div class="lesson-by" id="lesson_by">by Chef Arun Handunneththi</div>
             </div>
             <div class="lesson-comments">
                 <div class="lesson-comment-title">Reviews</div>
-                <div class="lesson-comment-container">
-                    <div class="lesson-comment">
+                <div class="lesson-comment-container" id="lesson_review_container">
+                    <!-- <div class="lesson-comment">
                         <div class="lesson-comment-user-image"></div>
                         <div class="lesson-name-and-comment">
                             <div class="lesson-comment-user-name">This is user name</div>
@@ -104,8 +106,8 @@
                                 accusantium officiis! Quae velit facere reiciendis?
                             </div>
                         </div>
-                    </div>
-                    <div class="lesson-comment">
+                    </div> -->
+                    <!-- <div class="lesson-comment">
                         <div class="lesson-comment-user-image"></div>
                         <div class="lesson-name-and-comment">
                             <div class="lesson-comment-user-name">This is user name</div>
@@ -115,25 +117,25 @@
                                 accusantium officiis! Quae velit facere reiciendis?
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <div class="lesson-right-panel">
-            <div class="lesson-suggest-container">
-                <div class="lesson-suggest-1-container">
+            <div class="lesson-suggest-container" id="suggestCardContainer">
+                <!-- <div class="lesson-suggest-1-container">
+                    <div class="suggest-lesson-image"></div>
+                    <div class="suggest-lesson-name">suggest name</div>
+                </div> -->
+                <!-- <div class="lesson-suggest-1-container">
                     <div class="suggest-lesson-image"></div>
                     <div class="suggest-lesson-name">suggest name</div>
                 </div>
                 <div class="lesson-suggest-1-container">
                     <div class="suggest-lesson-image"></div>
                     <div class="suggest-lesson-name">suggest name</div>
-                </div>
-                <div class="lesson-suggest-1-container">
-                    <div class="suggest-lesson-image"></div>
-                    <div class="suggest-lesson-name">suggest name</div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -161,6 +163,8 @@
             <div class="copyright">© 2024 Website Name. All rights reserved</div>
         </div>
     </footer>
+
+    <script src="./js/lesson.js"></script>
 </body>
 
 </html>

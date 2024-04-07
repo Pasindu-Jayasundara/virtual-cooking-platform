@@ -1,12 +1,26 @@
 var logedInUser = null;
+var chefId = null;
+var chefArr=null;
 
 window.addEventListener("load", function () {
+
+  var pageUrl = window.location.href.split("/").pop();
+  if(pageUrl.split("?").length > 1) {
+      
+      pageUrl = pageUrl.split("?")[1];
+      chefId = pageUrl.split("=")[1];
+  }
 
   if (logedInUser == null) {
     logedInUser = JSON.parse(localStorage.getItem("logedInUser"));
   }
 
   if(chefId != null) {
+
+    chefArr = JSON.parse(localStorage.getItem("chefs"));
+    document.getElementsByTagName("body")[0].style.display = "block";
+    document.getElementById("new_tu_btn").style.display = "none";
+
     loadChefDetails(chefId);
     loadChefTutorials(chefId);
   }
