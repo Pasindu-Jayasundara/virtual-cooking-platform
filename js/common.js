@@ -68,6 +68,68 @@ function isUsersAvaliable() {
     return true;
 }
 
+
+function pay(paymentDetails){
+
+    // var paymentObject = {
+    //     price: lessonPrice,
+    //     items: itemName,
+    //     logedinUserName: logedinUser.name,
+    //     logedinUserEmail: logedinUser.username,
+    // };
+
+    console.log(paymentDetails)
+
+    // Payment completed. It can be a successful failure.
+    payhere.onCompleted = function onCompleted(orderId) {
+        alert("Payment completed. OrderID:" + orderId);
+        // Note: validate the payment and show success or failure page to the customer
+    };
+
+    // Payment window closed
+    payhere.onDismissed = function onDismissed() {
+        // Note: Prompt user to pay again or show an error page
+        alert("Payment dismissed");
+    };
+
+    // Error occurred
+    payhere.onError = function onError(error) {
+        // Note: show an error page
+        alert("Error:"  + error);
+    };
+
+    // Put the payment variables here
+    var payment = {
+        "sandbox": true,
+        "merchant_id": "1226441",    // Replace your Merchant ID
+        "return_url": "http://127.0.0.1:5500/search.html",     // Important
+        "cancel_url": "http://127.0.0.1:5500/search.html",     // Important
+        "notify_url": "http://sample.com/notify",
+        "order_id": new Date().getTime(),
+        "items": paymentDetails.items,
+        "amount": paymentDetails.price,
+        "currency": "LKR",
+        "hash": "45D3CBA93E9F2189BD630ADFE19AA6DC", // *Replace with generated hash retrieved from backend
+        "first_name": paymentDetails.logedinUserName,
+        "last_name": "",
+        "email": paymentDetails.logedinUserEmail,
+        "phone":"0740211671",
+        "address": "testing address",
+        "city": "colombo",
+        "country": "sri lanka",
+        "delivery_address": "",
+        "delivery_city": "",
+        "delivery_country": "",
+        "custom_1": "",
+        "custom_2": ""
+    };
+
+    payhere.startPayment(payment);
+
+}
+
+
+
 var chefArray = [
     {
         id: 1,
@@ -193,31 +255,37 @@ var reviewArray = [
 localStorage.setItem("reviews", JSON.stringify(reviewArray));
 
 
-var userObj = {
-    "a@gmail.com":{
-        name: "a",
-        username: "",
-        password: "",
-        purchased_tutorials: null,
-        payment_history: null,
-        recently_accessed: null,
-        isChef: false,
-        my_tutorials: null,
-        image: "../resources/images/cheff5.png",
-    },
-    "c@gmail.com":{
-        name: "a",
-        username: "",
-        password: "",
-        purchased_tutorials: null,
-        payment_history: null,
-        recently_accessed: null,
-        isChef: false,
-        my_tutorials: null,
-        image: "../resources/images/cheff5.png",
-    },
-};
-localStorage.setItem("users", JSON.stringify(userObj));
+
+if(localStorage.getItem("users") == null) {
+
+    var userObj = {
+        "a@gmail.com":{
+            name: "a",
+            username: "",
+            password: "",
+            purchased_tutorials: null,
+            payment_history: null,
+            recently_accessed: null,
+            isChef: false,
+            my_tutorials: null,
+            image: "../resources/images/cheff5.png",
+        },
+        "c@gmail.com":{
+            name: "a",
+            username: "",
+            password: "",
+            purchased_tutorials: null,
+            payment_history: null,
+            recently_accessed: null,
+            isChef: false,
+            my_tutorials: null,
+            image: "../resources/images/cheff5.png",
+        },
+    };
+
+    localStorage.setItem("users", JSON.stringify(userObj));
+}
+
 
 
 var cartArray = [

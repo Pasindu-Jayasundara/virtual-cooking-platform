@@ -36,8 +36,8 @@ function loadSearchLessons() {
     
             var card = tutorialArr[id];
             var searchCard = `
-                <div class="search-card" onclick="goto_lesson(${card.id});">
-                    <div class="search-card-head" style="background-image:url(${card.image});"></div>
+                <div class="search-card">
+                    <div class="search-card-head" style="background-image:url(${card.image});" onclick="goto_lesson(${card.id});"></div>
                     <div class="search-card-body">
 
                         <div class="search-card-body-first">
@@ -55,7 +55,7 @@ function loadSearchLessons() {
 
                         <div class="search-card-footer">
                             <div class="search-card-cart" onclick="addtoCard(${card.id});">Add to Cart</div>
-                            <div class="search-card-buy" onclick="buyNow(${card.price});">Buy Now</div>
+                            <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}');" id="payhere-payment">Buy Now</div>
                         </div>
 
                     </div>
@@ -74,10 +74,38 @@ function goto_lesson(id) {
 
 function addtoCard(lessonid){
 
+    var currentCartArray = JSON.parse(localStorage.getItem("cart"));
+
+    var newCartObj = {
+        id: currentCartArray.length,
+        lessonId: lessonid,
+    };
+
+    currentCartArray.push(newCartObj);
+    localStorage.setItem("cart", JSON.stringify(currentCartArray));
+
+    alert("Item Added to Cart!");
+
 }
 
-function buyNow(price){
+function buyNow(lessonPrice,itemName){
+    if(isLoggedIn()) {
+        
+        var logedinUser = JSON.parse(localStorage.getItem("logedInUser"));
 
+        var paymentObject = {
+            price: lessonPrice,
+            items: itemName,
+            logedinUserName: logedinUser.name,
+            logedinUserEmail: logedinUser.username,
+        };
+
+        pay(paymentObject);
+
+    }else{
+        alert("Please Login First!");
+        window.location.href = "login.html";
+    }
 }
 
 function loadLessons(){
@@ -98,8 +126,8 @@ function loadLessons(){
     
             var card = tutorialArray[id];
             var searchCard = `
-                <div class="search-card" onclick="goto_lesson(${card.id});">
-                    <div class="search-card-head" style="background-image:url(${card.image});"></div>
+                <div class="search-card">
+                    <div class="search-card-head" style="background-image:url(${card.image});" onclick="goto_lesson(${card.id});"></div>
                     <div class="search-card-body">
 
                         <div class="search-card-body-first">
@@ -117,7 +145,7 @@ function loadLessons(){
 
                         <div class="search-card-footer">
                             <div class="search-card-cart" onclick="addtoCard(${card.id});">Add to Cart</div>
-                            <div class="search-card-buy" onclick="buyNow(${card.price});">Buy Now</div>
+                            <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}');" id="payhere-payment">Buy Now</div>
                         </div>
 
                     </div>
