@@ -6,13 +6,13 @@ window.addEventListener("load", function () {
         logedInUser = JSON.parse(localStorage.getItem("logedInUser"));
     }
 
-    if(JSON.parse(localStorage.getItem("logedInUser")).isChef){
-        document.getElementById("up-check-box").setAttribute("checked", "true");
-        document.getElementById("chefAccountBtn").style.display = "block";
-    }else{
-        document.getElementById("up-check-box").removeAttribute("checked");
-        document.getElementById("chefAccountBtn").style.display = "none";
-    }
+    // if(JSON.parse(localStorage.getItem("logedInUser")).isChef){
+    //     document.getElementById("up-check-box").setAttribute("checked", "true");
+    //     document.getElementById("chefAccountBtn").style.display = "block";
+    // }else{
+    //     document.getElementById("up-check-box").removeAttribute("checked");
+    //     document.getElementById("chefAccountBtn").style.display = "none";
+    // }
 
     loadRecentlyAccessed();
     loadPurchasedTutorials();
