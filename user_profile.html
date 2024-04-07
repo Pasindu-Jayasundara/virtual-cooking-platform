@@ -223,8 +223,12 @@
 
                 <details id="detail_4">
                     <summary>Profile Settings</summary>
-                    <div class="up-recent-access-container">
-                        make me a chef
+                    <div class="up-recent-access-container up-profile-setting">
+                        <span onclick="setChefStatus(event);">
+                            <input type="checkbox" id="up-check-box" class="up-checkbox">
+                            <label for="up-check-box">Make me a Chef</label>
+                        </span>
+                        <input type="button" id="chefAccountBtn" value="My Chef Account" class="up-chef-account-btn" onclick="goToChefAccount();">
                     </div>
                 </details>
             </div>

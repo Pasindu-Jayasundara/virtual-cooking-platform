@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  display: none;
+  background-color: black;
+}
 .cp-container {
   width: 100vw;
   height: 100vh;

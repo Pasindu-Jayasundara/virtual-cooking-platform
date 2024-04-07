@@ -135,3 +135,25 @@ function logout() {
     window.location.href = "login.html";
 
 }    
+
+function goToChefAccount() {
+    window.location.href = "chef_profile.html";
+}
+
+function setChefStatus(event){
+
+    event.preventDefault(); 
+    event.stopPropagation();
+
+    if(logedInUser.isChef){
+
+        logedInUser.isChef = false;
+        document.getElementById("chefAccountBtn").style.display = "none";
+    }else{
+
+        logedInUser.isChef = true;
+        document.getElementById("chefAccountBtn").style.display = "block";
+    }
+
+    localStorage.setItem("logedInUser", JSON.stringify(logedInUser));
+}

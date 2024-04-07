@@ -1,10 +1,13 @@
 window.addEventListener("load", function() {
 
     var pageUrl = window.location.href.split("/").pop();
-    if(pageUrl!=undefined && pageUrl == "user_profile.html") {
+    if(pageUrl!=undefined && pageUrl == "user_profile.html" || pageUrl == "chef_profile.html") {
         if(isLoggedIn()) {
             this.document.getElementsByTagName("body")[0].style.display = "block";
-            this.document.getElementById("user_profile-name").innerHTML =  JSON.parse(localStorage.getItem("logedInUser")).name;
+
+            if(pageUrl == "user_profile.html") {
+                this.document.getElementById("user_profile-name").innerHTML =  JSON.parse(localStorage.getItem("logedInUser")).name;
+            }
         }else{
             window.location.href = "login.html";
         }

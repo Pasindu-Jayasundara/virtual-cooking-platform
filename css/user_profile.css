@@ -144,6 +144,25 @@ summary {
   font-weight: bold;
   color: black;
 }
+.up-profile-setting{
+  color: rgb(235, 145, 0);
+  font-weight: 15px;
+}
+.up-checkbox{
+  margin-right: 10px;
+}
+.up-chef-account-btn{
+  background-color: rgb(235, 145, 0);
+  color: white;
+  padding-inline: 10px;
+  padding-block: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-left: 30px;
+  display: none;
+}
 
 @media (max-width: 576px) {
   .up-left-bar {
