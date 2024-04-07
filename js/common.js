@@ -289,3 +289,51 @@ if(localStorage.getItem("cart") == null) {
     ];
     localStorage.setItem("cart", JSON.stringify(cartArray));
 }
+
+var trending = [
+    {
+        id: 1,
+        name: "a",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 1
+    },
+    {
+        id: 2,
+        name: "a",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 1
+    },
+    {
+        id: 3,
+        name: "a",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 1
+    },
+    {
+        id: 4,
+        name: "a",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 1
+    },
+];
+localStorage.setItem("trending", JSON.stringify(trending));

@@ -54,7 +54,7 @@ function loadSearchLessons() {
                         <div class="search-card-by">Tutorial By : <span>${card.chef_name}</span></div>
 
                         <div class="search-card-footer">
-                            <div class="search-card-cart" onclick="addtoCard(${card.id});">Add to Cart</div>
+                            <div class="search-card-cart" onclick="addtoCart(${card.id});">Add to Cart</div>
                             <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}');" id="payhere-payment">Buy Now</div>
                         </div>
 
@@ -72,7 +72,7 @@ function goto_lesson(id) {
   window.location.href = "lesson.html?tutorialId="+id;
 }
 
-function addtoCard(lessonid){
+function addtoCart(lessonid){
 
     var currentCartArray = JSON.parse(localStorage.getItem("cart"));
 
@@ -144,7 +144,7 @@ function loadLessons(){
                         <div class="search-card-by">Tutorial By : <span>${card.chef_name}</span></div>
 
                         <div class="search-card-footer">
-                            <div class="search-card-cart" onclick="addtoCard(${card.id});">Add to Cart</div>
+                            <div class="search-card-cart" onclick="addtoCart(${card.id});">Add to Cart</div>
                             <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}');" id="payhere-payment">Buy Now</div>
                         </div>
 
