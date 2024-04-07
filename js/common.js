@@ -1,3 +1,26 @@
+window.addEventListener("load", function() {
+
+    var pageUrl = window.location.href.split("/").pop();
+    if(pageUrl!=undefined && pageUrl == "user_profile.html") {
+        if(isLoggedIn()) {
+            this.document.getElementsByTagName("body")[0].style.display = "block";
+            this.document.getElementById("user_profile-name").innerHTML =  JSON.parse(localStorage.getItem("logedInUser")).name;
+        }else{
+            window.location.href = "login.html";
+        }
+    }
+
+});
+
+
+function setLogedInUser(user) {
+    localStorage.setItem("logedInUser", JSON.stringify(user));
+}
+
+function isLoggedIn() {
+    return localStorage.getItem("logedInUser") != null;
+}
+
 function validateEmail(email) {
     
     var validEmailFormat = /^[^+@]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;

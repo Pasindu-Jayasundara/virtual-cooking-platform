@@ -10,14 +10,15 @@ function login(){
     }else{
 
         if(!isUsersAvaliable()){
-            alert("No registered users");
+            alert("Please registered first");
         }else{
-            var users = localStorage.getItem("users");
+            var users = JSON.parse(localStorage.getItem("users"));
             if(users[email] == null){
                 alert("You are not registered. Please register to continue");
             }else{
-                var user = JSON.parse(users[email]);
+                var user = users[email];
                 if(user.username == email && user.password == password){
+                    setLogedInUser(user);
                     alert("Login successful");
                     window.location.href = "user_profile.html";
                 }else{
@@ -27,6 +28,5 @@ function login(){
         }
 
     }
-
 
 }

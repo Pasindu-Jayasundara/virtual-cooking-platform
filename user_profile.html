@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/user_profile.css" />
+
+    <script src="./js/common.js"></script>
 </head>
 
 <body>
@@ -73,24 +75,24 @@
 
                 <div class="up-menu-container">
                     <ul>
-                        <li>
+                        <li onclick="showSection(1);">
                             <i class="bi bi-clock-history up-menu-icon"></i> Recent
                         </li>
-                        <li>
+                        <li onclick="showSection(2);">
                             <i class="bi bi-substack up-menu-icon"></i> Purchased
                         </li>
-                        <li>
+                        <li onclick="showSection(3);">
                             <i class="bi bi-credit-card-fill up-menu-icon"></i> Payment
                         </li>
-                        <li>
+                        <li onclick="showSection(4);">
                             <i class="bi bi-gear-fill up-menu-icon"></i> Settings
                         </li>
                     </ul>
                 </div>
 
                 <div class="up-name-logout">
-                    <div class="up-profile-name">This is name</div>
-                    <i class="bi bi-box-arrow-right up-logout-icon"></i>
+                    <div class="up-profile-name" id="user_profile-name">This is name</div>
+                    <i class="bi bi-box-arrow-right up-logout-icon" onclick="logout();"></i>
                 </div>
 
             </div>
@@ -99,11 +101,11 @@
         <div class="up-display">
 
             <div class="up-recent-access">
-                <details open>
+                <details id="detail_1" open>
                     <summary>Recently Accessed Tutorials</summary>
-                    <div class="up-recent-access-container">
+                    <div class="up-recent-access-container" id="recentlyAccessedDiv">
 
-                        <div class="search-card">
+                        <!-- <div class="search-card">
                             <div class="search-card-head"></div>
                             <div class="search-card-body">
 
@@ -137,16 +139,16 @@
                                 <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
 
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </details>
 
-                <details>
+                <details id="detail_2">
                     <summary>Purchased Tutorials</summary>
-                    <div class="up-recent-access-container">
+                    <div class="up-recent-access-container" id="purchasedTutorialsDiv">
 
-                        <div class="search-card">
+                        <!-- <div class="search-card">
                             <div class="search-card-head"></div>
                             <div class="search-card-body">
 
@@ -162,16 +164,16 @@
                                 <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
 
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </details>
 
-                <details>
+                <details id="detail_3">
                     <summary>Payment History</summary>
-                    <div class="up-recent-access-container">
+                    <div class="up-recent-access-container" id="paymentHistoryDiv">
 
-                        <div class="up-history-card">
+                        <!-- <div class="up-history-card">
                             <div class="up-history-text">
                                 <span class="up-history-title">Tutorial : </span>Course name
                             </div>
@@ -214,17 +216,17 @@
                             <div class="up-history-text">
                                 <span class="up-history-title">Paid : </span>$ 500.00
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </details>
 
-                <!--<details>
+                <details id="detail_4">
                     <summary>Profile Settings</summary>
                     <div class="up-recent-access-container">
-
+                        make me a chef
                     </div>
-                </details> -->
+                </details>
             </div>
 
         </div>
@@ -254,6 +256,7 @@
         </div>
     </footer>
 
+    <script src="./js/userProfile.js"></script>
 </body>
 
 </html>

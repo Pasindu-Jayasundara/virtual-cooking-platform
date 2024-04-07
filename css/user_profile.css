@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+body{
+  display: none;
+  background-color: black;
 }
 .up-container {
   display: flex;
@@ -96,6 +101,7 @@ details {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
+  transition-duration: 1s;
 }
 summary {
   background-color: rgb(0, 0, 0);
