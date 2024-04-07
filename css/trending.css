@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.trending-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  padding-top: 108px;
+}
+.trending-search-card {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+.search-card-head {
+  position: relative;
+}
+.trending-mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-inline: 15px;
+  padding-block: 5px;
+  background-color: #f99500;
+  border-radius: 0 5px 0 10px;
+  font-size: 15px;
+  color: white;
+}

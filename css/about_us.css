@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.au-body-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.au-image {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../resources/images/au6.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.au-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.601);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.au-cover-text {
+  margin-top: 50px;
+}
+.au-history {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+.au-history-conatiner {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-inline: 50px;
+}
+.au-history-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(174, 113, 0);
+}
+.au-history-desc {
+  font-size: 15px;
+  line-height: 26px;
+}
+.au-history-image-container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.au-history-image {
+  background-image: url("../resources/images/au3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 380px;
+  height: 380px;
+  border-radius: 20%;
+}
+.au-founder {
+  flex-direction: row-reverse;
+  margin-top: -150px;
+}
+.au-testimonial,.au-partnership{
+    margin-top: -100px;
+}
+
+@media (max-width:576px) {
+    .au-body-container{
+        background-color: white;
+        width: 100vw;
+    }
+    .au-cover-text{
+        font-size: 35px;
+    }
+    .au-history{
+        flex-direction: column;
+        margin-top: 25vh;
+        width: 100%;
+    }
+    .au-history-conatiner{
+        width: 100%;
+        padding-inline: 20px;
+    }
+    .au-history-image{
+        border-radius: 0;
+        margin-top: 30px;
+    }
+    .au-founder{
+        margin-top: 60vh;
+    }
+    .au-partnership{
+        margin-top: 23vh;
+        padding-left: 0;
+        width: 100%;
+    }
+    .au-associate-desc-container{
+        margin: 0;
+        width: 100%;
+    }
+    .au-associate-img-container{
+        width: 100%;
+        margin-left: 0;
+        
+    }
+    .au-testimonial{
+        padding-left: 0;
+        width: 100%;
+        margin-top: -2vh;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .au-tes-img-con{
+        display: none;
+    }
+    .au-tes-container{
+        width: 100%;
+        padding-inline: 20px;
+        margin-left: 0;
+    }
+    .au-learn{
+        font-size: 45px;
+    }
+}
