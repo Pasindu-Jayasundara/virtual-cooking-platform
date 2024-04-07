@@ -91,6 +91,7 @@ function register() {
         // my_tutorials: null
         my_tutorials: [
           {
+            id: 1,
             name: "How to make a cake",
             price: "1000.00",
             related_to: "American Cuisine",
@@ -98,6 +99,7 @@ function register() {
             chef_name: "Chef A"
           },
           {
+            id: 2,
             name: "How to make a Bun",
             price: "1000.00",
             related_to: "Australian Cuisine",
@@ -105,6 +107,7 @@ function register() {
             chef_name: "Chef A"
           },
           {
+            id: 3,
             name: "How to make a cake",
             price: "1000.00",
             related_to: "Sri Lankan Cuisine",

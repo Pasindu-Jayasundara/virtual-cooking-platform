@@ -1,16 +1,38 @@
+var chefId = null;
+var chefArr=null;
+
 window.addEventListener("load", function() {
 
     var pageUrl = window.location.href.split("/").pop();
-    if(pageUrl!=undefined && pageUrl == "user_profile.html" || pageUrl == "chef_profile.html") {
-        if(isLoggedIn()) {
-            this.document.getElementsByTagName("body")[0].style.display = "block";
+    if(pageUrl.split("?").length > 1) {
+        
+        pageUrl = pageUrl.split("?")[1];
+        chefId = pageUrl.split("=")[1];
 
-            if(pageUrl == "user_profile.html") {
-                this.document.getElementById("user_profile-name").innerHTML =  JSON.parse(localStorage.getItem("logedInUser")).name;
-            }
+        pageUrl = window.location.href.split("/").pop();
+        pageUrl = pageUrl.split("?")[0];
+    }
+
+    if(pageUrl!=undefined && pageUrl == "user_profile.html" || pageUrl == "chef_profile.html") {
+
+        if(chefId != null) {
+
+            chefArr = JSON.parse(localStorage.getItem("chefs"));
+            this.document.getElementsByTagName("body")[0].style.display = "block";
+            this.document.getElementById("new_tu_btn").style.display = "none";
+
         }else{
-            window.location.href = "login.html";
+            if(isLoggedIn()) {
+                this.document.getElementsByTagName("body")[0].style.display = "block";
+    
+                if(pageUrl == "user_profile.html") {
+                    this.document.getElementById("user_profile-name").innerHTML =  JSON.parse(localStorage.getItem("logedInUser")).name;
+                }
+            }else{
+                window.location.href = "login.html";
+            }
         }
+
     }
 
 });
@@ -43,3 +65,94 @@ function isUsersAvaliable() {
     }
     return true;
 }
+
+var chefArray = [
+    {
+        id: 1,
+        name: "a",
+        town: "Town1",
+        numberOfTutorials: 10,
+        experience: 5,
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        image: "../resources/images/cheff5.png",
+    },
+    {
+        id: 2,
+        name: "c",
+        town: "Town1",
+        numberOfTutorials: 10,
+        experience: 5,
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        image: "../resources/images/cheff5.png",
+    },
+    {
+        id: 3,
+        name: "vf",
+        town: "Town1",
+        numberOfTutorials: 10,
+        experience: 5,
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        image: "../resources/images/cheff5.png",
+    },
+    {
+        id: 4,
+        name: "Chef1",
+        town: "Towsdcn1",
+        numberOfTutorials: 10,
+        experience: 5,
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        image: "../resources/images/cheff5.png",
+    },
+];
+localStorage.setItem("chefs", JSON.stringify(chefArray));
+
+
+
+
+var tutorialArr = [
+    {
+        id: 1,
+        name: "a",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 1
+    },
+    {
+        id: 2,
+        name: "c",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 2
+    },
+    {
+        id: 3,
+        name: "vf",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 1
+    },
+    {
+        id: 4,
+        name: "Chef1",
+        image: "../resources/images/cheff5.png",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        price: "1000.00",
+        related_to: "American Cuisine",
+        description: "This is a tutorial on how to make a cake",
+        chef_name: "Chef A",
+        chefId: 2
+    },
+];
+localStorage.setItem("tutorials", JSON.stringify(tutorialArr));

@@ -43,7 +43,7 @@
   margin: 20px;
 }
 .chef-card-header {
-  background-image: url("../resources/images/cheff5.png");
+  /* background-image: url("../resources/images/cheff5.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
