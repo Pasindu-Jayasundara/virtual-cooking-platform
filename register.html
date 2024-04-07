@@ -72,17 +72,27 @@
                 <div class="login_txtBox_area">
 
                     <div class="login-input-wrapper">
-                        <label class="login-label" for="login_uname">Email Address</label>
-                        <input type="text" placeholder="user@gmail.com" id="login_uname" class="input">
+                        <label class="login-label" for="reg_name">Name</label>
+                        <input type="text" id="reg_name" class="input">
                     </div>
 
                     <div class="login-input-wrapper">
-                        <label class="login-label" for="login_pass">Password</label>
-                        <input type="password" placeholder="Password" id="login_pass" class="input">
+                        <label class="login-label" for="reg_name">Email Address</label>
+                        <input type="text" placeholder="user@gmail.com" id="reg_uname" class="input">
+                    </div>
+
+                    <div class="login-input-wrapper">
+                        <label class="login-label" for="reg_pass">Password</label>
+                        <input type="password" placeholder="Password" id="reg_pass" class="input">
+                    </div>
+
+                    <div class="login-input-wrapper">
+                        <label class="login-label" for="reg_re_pass">Confirm Password</label>
+                        <input type="password" placeholder="Re-enter Password" id="reg_re_pass" class="input">
                     </div>
 
                     <div class="login-input-wrapper login-btn-div">
-                        <div type="button" class="login-btn" id="login_submit_btn">LogIn</div>
+                        <div type="button" class="login-btn" id="login_submit_btn" onclick="register();">Register</div>
                     </div>
 
                     <div class="register-redirect">
@@ -120,6 +130,8 @@
     </footer>
 
     <script src="./js/header.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/register.js"></script>
 </body>
 
 </html>
