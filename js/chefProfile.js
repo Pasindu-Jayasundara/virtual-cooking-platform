@@ -1,71 +1,82 @@
-window.addEventListener("load", function() {
-    loadMyTutorials();
+var logedInUser = null;
+
+window.addEventListener("load", function () {
+  if (logedInUser == null) {
+    logedInUser = JSON.parse(localStorage.getItem("logedInUser"));
+  }
+
+  loadMyTutorials();
 });
 
-function showNewTutorialForm(){
-    if(document.getElementById('newTutorialForm').style.display == 'block'){
-        document.getElementById('newTutorialForm').style.display = 'none';
+function showNewTutorialForm() {
+  if (document.getElementById("newTutorialForm").style.display == "block") {
+    document.getElementById("newTutorialForm").style.display = "none";
 
-        document.getElementById('cp_tutorial_name').value = '';
-        document.getElementById('cp_tutorial_price').value = '';
-        document.getElementById('cp_tutorial_relate_to').value = '';
-        document.getElementById('cp_tutorial_desc').value = '';
-    }
-    else{
-        document.getElementById('newTutorialForm').style.display = 'block';
-    }
+    document.getElementById("cp_tutorial_name").value = "";
+    document.getElementById("cp_tutorial_price").value = "";
+    document.getElementById("cp_tutorial_relate_to").value = "";
+    document.getElementById("cp_tutorial_desc").value = "";
+  } else {
+    document.getElementById("newTutorialForm").style.display = "block";
+  }
 }
 
-function addNewTutorial(){
-    var tutorial_name = document.getElementById('cp_tutorial_name').value;
-    var tutorial_price = document.getElementById('cp_tutorial_price').value;
-    var tutorial_relate_to = document.getElementById('cp_tutorial_relate_to').value;
-    var tutorial_desc = document.getElementById('cp_tutorial_desc').value;
+function addNewTutorial() {
+  var tutorial_name = document.getElementById("cp_tutorial_name").value;
+  var tutorial_price = document.getElementById("cp_tutorial_price").value;
+  var tutorial_relate_to = document.getElementById("cp_tutorial_relate_to").value;
+  var tutorial_desc = document.getElementById("cp_tutorial_desc").value;
 
-    if(tutorial_name.trim() == ''){
-        alert('Please enter tutorial name');
-    }else if(tutorial_price.trim() == '' && isNaN(tutorial_price)){
-        alert('Invalid tutorial price');
-    }else if(tutorial_relate_to.trim() == ''){
-        alert('Please enter tutorial relate to');
-    }else if(tutorial_desc.trim() == ''){
-        alert('Please enter tutorial description');
-    }else{
-        
-        if(logedInUser.my_tutorials == null){
-            var tutorials = [];
-        }else{
-            var tutorials = logedInUser.my_tutorials;
-        }
-
-        var newTutorial = {
-            name: tutorial_name,
-            price: tutorial_price,
-            relate_to: tutorial_relate_to,
-            description: tutorial_desc,
-            chefName: logedInUser.name
-        };
-
-        tutorials[tutorials.length] = newTutorial;
-        logedInUser.my_tutorials = tutorials;
-
-        localStorage.setItem("logedInUser", JSON.stringify(logedInUser));
-
-        alert('Tutorial added successfully');
-        loadMyTutorials();
+  if (tutorial_name.trim() == "") {
+    alert("Please enter tutorial name");
+  } else if (tutorial_price.trim() == "" && isNaN(tutorial_price)) {
+    alert("Invalid tutorial price");
+  } else if (tutorial_relate_to.trim() == "") {
+    alert("Please enter tutorial relate to");
+  } else if (tutorial_desc.trim() == "") {
+    alert("Please enter tutorial description");
+  } else {
+    if (logedInUser.my_tutorials == null) {
+      var tutorials = [];
+    } else {
+      var tutorials = logedInUser.my_tutorials;
     }
+
+    var newTutorial = {
+      name: tutorial_name,
+      price: tutorial_price,
+      relate_to: tutorial_relate_to,
+      description: tutorial_desc,
+      chef_name: logedInUser.name,
+    };
+
+    console.log(newTutorial);
+
+    tutorials[tutorials.length] = newTutorial;
+    logedInUser.my_tutorials = tutorials;
+
+    localStorage.setItem("logedInUser", JSON.stringify(logedInUser));
+
+    var currentUsersObject = JSON.parse(localStorage.getItem("users"));
+    currentUsersObject[logedInUser.username] = logedInUser;
+
+    localStorage.setItem("users",JSON.stringify(currentUsersObject));
+
+    alert("Tutorial added successfully");
+    loadMyTutorials();
+  }
 }
 
-function loadMyTutorials(){
+function loadMyTutorials() {
+  var myTutorialArr = logedInUser.my_tutorials;
 
-    var myTutorialArr = logedInUser.my_tutorials;
-    if (myTutorialArr != null) {
-  
-      var myTutorialCardList = "";
-  
-      for(var card in myTutorialArr){
-  
-          var myTutorialCard = `
+  if (myTutorialArr != null) {
+    var myTutorialCardList = "";
+
+    for (var id in myTutorialArr) {
+
+      var card = myTutorialArr[id];
+      var myTutorialCard = `
               <div class="search-card">
                   <div class="search-card-head"></div>
                   <div class="search-card-body">
@@ -84,11 +95,9 @@ function loadMyTutorials(){
                   </div>
               </div>
           `;
-          myTutorialCardList += myTutorialCard;
-      }
-  
-      document.getElementById("cpTutorialDiv").innerHTML = myTutorialCardList;
-  
+      myTutorialCardList += myTutorialCard;
     }
 
+    document.getElementById("cpTutorialDiv").innerHTML = myTutorialCardList;
+  }
 }
