@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/search.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <script src="./js/common.js"></script>
 </head>
 
 <body>
@@ -69,7 +71,7 @@
             <div class="search-left-bar-container">
 
                 <div class="search-input-div">
-                    <input type="text" class="search-input-search" placeholder="Search" />
+                    <input type="text" class="search-input-search" placeholder="Search" id="search_search_input"/>
                     <i class="bi bi-search search-icon-search"></i>
                 </div>
 
@@ -112,6 +114,115 @@
                 </div>
 
                 <section class="search-display-section">
+                    <!-- <div class="search-display-section-title">
+                        <span>Section title 01</span>
+                    </div> -->
+                    <div class="search-display-section-body" id="search_display_div">
+
+                        <!-- <div class="search-card">
+                            <div class="search-card-head"></div>
+                            <div class="search-card-body">
+
+                                <div class="search-card-body-first">
+
+                                    <div class="search-card-body-second">
+                                        <div class="search-card-name">This is card Name</div>
+                                        <div class="search-card-city">Australian</div>
+                                    </div>
+
+                                    <div class="search-card-price">$ 50.00</div>
+
+                                </div>
+
+                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
+
+                                <div class="search-card-footer">
+                                    <div class="search-card-cart">Add to Cart</div>
+                                    <div class="search-card-buy">Buy Now</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="search-card">
+                            <div class="search-card-head"></div>
+                            <div class="search-card-body">
+
+                                <div class="search-card-body-first">
+
+                                    <div class="search-card-body-second">
+                                        <div class="search-card-name">This is card Name</div>
+                                        <div class="search-card-city">Australian</div>
+                                    </div>
+
+                                    <div class="search-card-price">$ 50.00</div>
+
+                                </div>
+
+                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
+
+                                <div class="search-card-footer">
+                                    <div class="search-card-cart">Add to Cart</div>
+                                    <div class="search-card-buy">Buy Now</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="search-card">
+                            <div class="search-card-head"></div>
+                            <div class="search-card-body">
+
+                                <div class="search-card-body-first">
+
+                                    <div class="search-card-body-second">
+                                        <div class="search-card-name">This is card Name</div>
+                                        <div class="search-card-city">Australian</div>
+                                    </div>
+
+                                    <div class="search-card-price">$ 50.00</div>
+
+                                </div>
+
+                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
+
+                                <div class="search-card-footer">
+                                    <div class="search-card-cart">Add to Cart</div>
+                                    <div class="search-card-buy">Buy Now</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="search-card">
+                            <div class="search-card-head"></div>
+                            <div class="search-card-body">
+
+                                <div class="search-card-body-first">
+
+                                    <div class="search-card-body-second">
+                                        <div class="search-card-name">This is card Name</div>
+                                        <div class="search-card-city">Australian</div>
+                                    </div>
+
+                                    <div class="search-card-price">$ 50.00</div>
+
+                                </div>
+
+                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
+
+                                <div class="search-card-footer">
+                                    <div class="search-card-cart">Add to Cart</div>
+                                    <div class="search-card-buy">Buy Now</div>
+                                </div>
+
+                            </div>
+                        </div> -->
+
+                    </div>
+                </section>
+
+                <!-- <section class="search-display-section">
                     <div class="search-display-section-title">
                         <span>Section title 01</span>
                     </div>
@@ -218,116 +329,7 @@
                         </div>
 
                     </div>
-                </section>
-
-                <section class="search-display-section">
-                    <div class="search-display-section-title">
-                        <span>Section title 01</span>
-                    </div>
-                    <div class="search-display-section-body">
-
-                        <div class="search-card">
-                            <div class="search-card-head"></div>
-                            <div class="search-card-body">
-
-                                <div class="search-card-body-first">
-
-                                    <div class="search-card-body-second">
-                                        <div class="search-card-name">This is card Name</div>
-                                        <div class="search-card-city">Australian</div>
-                                    </div>
-
-                                    <div class="search-card-price">$ 50.00</div>
-
-                                </div>
-
-                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
-
-                                <div class="search-card-footer">
-                                    <div class="search-card-cart">Add to Cart</div>
-                                    <div class="search-card-buy">Buy Now</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="search-card">
-                            <div class="search-card-head"></div>
-                            <div class="search-card-body">
-
-                                <div class="search-card-body-first">
-
-                                    <div class="search-card-body-second">
-                                        <div class="search-card-name">This is card Name</div>
-                                        <div class="search-card-city">Australian</div>
-                                    </div>
-
-                                    <div class="search-card-price">$ 50.00</div>
-
-                                </div>
-
-                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
-
-                                <div class="search-card-footer">
-                                    <div class="search-card-cart">Add to Cart</div>
-                                    <div class="search-card-buy">Buy Now</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="search-card">
-                            <div class="search-card-head"></div>
-                            <div class="search-card-body">
-
-                                <div class="search-card-body-first">
-
-                                    <div class="search-card-body-second">
-                                        <div class="search-card-name">This is card Name</div>
-                                        <div class="search-card-city">Australian</div>
-                                    </div>
-
-                                    <div class="search-card-price">$ 50.00</div>
-
-                                </div>
-
-                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
-
-                                <div class="search-card-footer">
-                                    <div class="search-card-cart">Add to Cart</div>
-                                    <div class="search-card-buy">Buy Now</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="search-card">
-                            <div class="search-card-head"></div>
-                            <div class="search-card-body">
-
-                                <div class="search-card-body-first">
-
-                                    <div class="search-card-body-second">
-                                        <div class="search-card-name">This is card Name</div>
-                                        <div class="search-card-city">Australian</div>
-                                    </div>
-
-                                    <div class="search-card-price">$ 50.00</div>
-
-                                </div>
-
-                                <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
-
-                                <div class="search-card-footer">
-                                    <div class="search-card-cart">Add to Cart</div>
-                                    <div class="search-card-buy">Buy Now</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
+                </section> -->
             </div>
 
         </div>
@@ -356,6 +358,7 @@
         </div>
     </footer>
 
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

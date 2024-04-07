@@ -218,3 +218,24 @@ var userObj = {
     },
 };
 localStorage.setItem("users", JSON.stringify(userObj));
+
+
+var cartArray = [
+    {
+        id: 1,
+        lessonId: 1,
+    },
+    {
+        id: 2,
+        lessonId: 2,
+    },
+    {
+        id: 3,
+        lessonId: 3,
+    },
+    {
+        id: 4,
+        lessonId: 4,
+    },
+];
+localStorage.setItem("cart", JSON.stringify(cartArray));

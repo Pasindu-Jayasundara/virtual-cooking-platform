@@ -150,6 +150,7 @@
   padding-block: 20px;
   flex-wrap: wrap;
   padding-left: 50px;
+  overflow-y: scroll;
 }
 .search-card {
   display: flex;
@@ -233,6 +234,7 @@
   font-size: 14px;
   flex-grow: 1;
   margin-right: 10px;
+  cursor: pointer;
 }
 .search-card-buy {
   display: flex;
@@ -244,6 +246,7 @@
   border-radius: 2px;
   font-size: 14px;
   flex-grow: 1;
+  cursor: pointer;
 }
 .min-search-input-div{
     display: none;
