@@ -1,27 +1,9 @@
-// var chefId = null;
-// var chefArr=null;
-
 window.addEventListener("load", function() {
 
     var pageUrl = window.location.href.split("/").pop();
-    // if(pageUrl.split("?").length > 1) {
-        
-    //     pageUrl = pageUrl.split("?")[1];
-    //     chefId = pageUrl.split("=")[1];
 
-    //     pageUrl = window.location.href.split("/").pop();
-    //     pageUrl = pageUrl.split("?")[0];
-    // }
+    if(pageUrl!=undefined && pageUrl == "user_profile.html" || pageUrl == "chef_profile.html" || pageUrl == "cart.html") {
 
-    if(pageUrl!=undefined && pageUrl == "user_profile.html" || pageUrl == "chef_profile.html") {
-
-        // if(chefId != null) {
-
-        //     chefArr = JSON.parse(localStorage.getItem("chefs"));
-        //     this.document.getElementsByTagName("body")[0].style.display = "block";
-        //     this.document.getElementById("new_tu_btn").style.display = "none";
-
-        // }else{
             if(isLoggedIn()) {
                 this.document.getElementsByTagName("body")[0].style.display = "block";
     
@@ -31,7 +13,6 @@ window.addEventListener("load", function() {
             }else{
                 window.location.href = "login.html";
             }
-        // }
 
     }else if(pageUrl == "lesson.html"){
         this.window.history.back(); // no lesson id
@@ -287,23 +268,24 @@ if(localStorage.getItem("users") == null) {
 }
 
 
-
-var cartArray = [
-    {
-        id: 1,
-        lessonId: 1,
-    },
-    {
-        id: 2,
-        lessonId: 2,
-    },
-    {
-        id: 3,
-        lessonId: 3,
-    },
-    {
-        id: 4,
-        lessonId: 4,
-    },
-];
-localStorage.setItem("cart", JSON.stringify(cartArray));
+if(localStorage.getItem("cart") == null) {
+    var cartArray = [
+        // {
+        //     id: 1,
+        //     lessonId: 1,
+        // },
+        // {
+        //     id: 2,
+        //     lessonId: 2,
+        // },
+        // {
+        //     id: 3,
+        //     lessonId: 3,
+        // },
+        // {
+        //     id: 4,
+        //     lessonId: 4,
+        // },
+    ];
+    localStorage.setItem("cart", JSON.stringify(cartArray));
+}
