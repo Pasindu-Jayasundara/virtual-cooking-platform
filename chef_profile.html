@@ -80,36 +80,36 @@
         </div>
         <div class="cp-tutorial-container">
             <div class="cp-add-new-tutorial">
-                <div class="cp-new-tutorial-btn">New Tutorial</div>
-                <div class="cp-new-tutorial-fileds">
+                <div class="cp-new-tutorial-btn" onclick="showNewTutorialForm();">New Tutorial</div>
+                <div class="cp-new-tutorial-fileds" id="newTutorialForm">
 
                     <div class="contact-field-container">
                         <div class="contact-field">
                             <label class="contact-form-label">Tutorial Name</label>
-                            <input type="text" class="contact-form-input">
+                            <input type="text" class="contact-form-input" id="cp_tutorial_name">
                         </div>
                         <div class="contact-field">
                             <label class="contact-form-label">Price</label>
-                            <input type="text" class="contact-form-input">
+                            <input type="text" class="contact-form-input" id="cp_tutorial_price">
                         </div>
                         <div class="contact-field">
                             <label class="contact-form-label">Relate To</label>
-                            <input type="text" class="contact-form-input">
+                            <input type="text" class="contact-form-input" id="cp_tutorial_relate_to">
                         </div>
                         <div class="contact-field">
                             <label class="contact-form-label">Description</label>
-                            <textarea class="contact-form-input contact-textarea"></textarea>
+                            <textarea class="contact-form-input contact-textarea" id="cp_tutorial_desc"></textarea>
                         </div>
                         <div>
-                            <div class="contact-btn">submit</div>
+                            <div class="contact-btn" onclick="addNewTutorial();">submit</div>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="cp-tutorial">
-                <div class="search-card">
+            <div class="cp-tutorial" id="cpTutorialDiv">
+                <!-- <div class="search-card">
                     <div class="search-card-head"></div>
                     <div class="search-card-body">
 
@@ -161,35 +161,36 @@
                         <div class="search-card-by">Tutorial By : <span>Cheff Akash</span></div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-inner-container">
-                    <div class="footer-logo"></div>
-                    <div class="footer-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam temporibus optio voluptate, ex
-                        tenetur animi quas vitae molestias, sunt quia sequi autem eaque possimus quasi! Cum minus ea
-                        illo impedit!
-                    </div>
-                    <ul class="footer-nav">
-                        <li>About Us</li>
-                        <li>Contact Us</li>
-                        <li>Privacy Policy</li>
-                        <li>Locaation</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-end">
-                <hr class="footer-hr">
-                <div class="copyright">© 2024 Website Name. All rights reserved</div>
-            </div>
-        </footer>
-
     </div>
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-inner-container">
+                <div class="footer-logo"></div>
+                <div class="footer-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam temporibus optio voluptate, ex
+                    tenetur animi quas vitae molestias, sunt quia sequi autem eaque possimus quasi! Cum minus ea
+                    illo impedit!
+                </div>
+                <ul class="footer-nav">
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Locaation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end">
+            <hr class="footer-hr">
+            <div class="copyright">© 2024 Website Name. All rights reserved</div>
+        </div>
+    </footer>
+
+    <script src="./js/chefProfile.js"></script>
 </body>
 
 </html>

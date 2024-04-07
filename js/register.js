@@ -88,7 +88,30 @@ function register() {
           }
         },
         isChef: false,
-        my_tutorials: null
+        // my_tutorials: null
+        my_tutorials: [
+          {
+            name: "How to make a cake",
+            price: "1000.00",
+            related_to: "American Cuisine",
+            description: "This is a tutorial on how to make a cake",
+            chef_name: "Chef A"
+          },
+          {
+            name: "How to make a Bun",
+            price: "1000.00",
+            related_to: "Australian Cuisine",
+            description: "This is a tutorial on how to make a Bun",
+            chef_name: "Chef A"
+          },
+          {
+            name: "How to make a cake",
+            price: "1000.00",
+            related_to: "Sri Lankan Cuisine",
+            description: "This is a tutorial on how to make a cake",
+            chef_name: "Chef A"
+          }
+        ]
       };
 
       users[email] = user;

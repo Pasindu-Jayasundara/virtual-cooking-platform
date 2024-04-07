@@ -6,6 +6,14 @@ window.addEventListener("load", function () {
         logedInUser = JSON.parse(localStorage.getItem("logedInUser"));
     }
 
+    if(JSON.parse(localStorage.getItem("logedInUser")).isChef){
+        document.getElementById("up-check-box").setAttribute("checked", "true");
+        document.getElementById("chefAccountBtn").style.display = "block";
+    }else{
+        document.getElementById("up-check-box").removeAttribute("checked");
+        document.getElementById("chefAccountBtn").style.display = "none";
+    }
+
     loadRecentlyAccessed();
     loadPurchasedTutorials();
     loadPaymentHistory();
@@ -149,11 +157,20 @@ function setChefStatus(event){
 
         logedInUser.isChef = false;
         document.getElementById("chefAccountBtn").style.display = "none";
+        document.getElementById("up-check-box").removeAttribute("checked");
     }else{
 
         logedInUser.isChef = true;
         document.getElementById("chefAccountBtn").style.display = "block";
+        document.getElementById("up-check-box").setAttribute("checked", "true");
     }
 
     localStorage.setItem("logedInUser", JSON.stringify(logedInUser));
+
+    
+    var currentUsersObject = JSON.parse(localStorage.getItem("users"));
+    currentUsersObject[logedInUser.username] = logedInUser;
+
+    localStorage.setItem("users",JSON.stringify(currentUsersObject));
+
 }

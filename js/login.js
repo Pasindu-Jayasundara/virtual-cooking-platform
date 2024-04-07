@@ -15,11 +15,11 @@ function login(){
             var users = JSON.parse(localStorage.getItem("users"));
             if(users[email] == null){
                 alert("You are not registered. Please register to continue");
+                window.location.href = "register.html";
             }else{
                 var user = users[email];
                 if(user.username == email && user.password == password){
                     setLogedInUser(user);
-                    alert("Login successful");
                     window.location.href = "user_profile.html";
                 }else{
                     alert("Invalid username or password");

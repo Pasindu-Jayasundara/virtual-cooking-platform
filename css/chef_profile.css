@@ -10,11 +10,12 @@ body {
 }
 .cp-container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .cp-details {
   width: 100%;
@@ -79,6 +80,7 @@ body {
 }
 .cp-new-tutorial-fileds {
   width: 30%;
+  display: none;
 }
 .cp-tutorial {
   width: 100%;
