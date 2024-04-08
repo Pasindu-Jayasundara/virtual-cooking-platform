@@ -22,7 +22,9 @@ window.addEventListener("load", function () {
 });
 
 function addToRecent(){
-    var recentArr = JSON.parse(localStorage.getItem("recent"));
+
+    var logedInUser = JSON.parse(localStorage.getItem("logedInUser"));
+    var recentArr = logedInUser.recently_accessed;
 
     if(recentArr != null){
         var inRecentArray = false;
@@ -41,7 +43,12 @@ function addToRecent(){
                 lessonId: lessonId,
             };
             recentArr.push(recentObj);
-            localStorage.setItem("recent", JSON.stringify(recentArr));
+            logedInUser.recently_accessed = recentArr;
+            localStorage.setItem("logedInUser", JSON.stringify(logedInUser));
+
+            var userObj = JSON.parse(localStorage.getItem("users"));
+            userObj[logedInUser.username] = logedInUser;
+            localStorage.setItem("users", JSON.stringify(userObj));
 
         }
 
@@ -69,8 +76,10 @@ function loadLessonData() {
                 //         break;
                 //     }
                 // }
+
                 for(var i=0; i<purchasedTutorialArr.length; i++){
-                    if(purchasedTutorialArr[i].id == lessonId){
+
+                    if(purchasedTutorialArr[i].lessonId == lessonId){
                         isPurchased = true;
                         break;
                     }
