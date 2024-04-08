@@ -35,17 +35,20 @@ function register() {
           "1": {
             name: "How to make a cake",
             related_to: "American Cuisine",
-            chef_name: "Chef A"
+            chef_name: "Chef A",
+            lessonId: 1,
           },
           "2": {
             name: "How to make a Bun",
             related_to: "Australian Cuisine",
-            chef_name: "Chef A"
+            chef_name: "Chef A",
+            lessonId: 2,
           },
           "3": {
             name: "How to make a cake",
             related_to: "Sri Lankan Cuisine",
-            chef_name: "Chef A"
+            chef_name: "Chef A",
+            lessonId: 3,
           }
         },
         // payment_history: null,

@@ -1,4 +1,6 @@
 var lessonId=null;
+var loggedIn = false;
+var isPurchased = false;
 
 window.addEventListener("load", function () { 
 
@@ -13,23 +15,90 @@ window.addEventListener("load", function () {
         loadLessonData();
         loadLessonReviews();
         loadSuggestions();
+        addToRecent();
     }
 
 
 });
 
-function loadLessonData() {
+function addToRecent(){
+    var recentArr = JSON.parse(localStorage.getItem("recent"));
 
+    if(recentArr != null){
+        var inRecentArray = false;
+
+        for(var i=0; i<recentArr.length; i++){
+            if(recentArr[i].lessonId == lessonId){
+                inRecentArray = true;
+                break;
+            }
+        }
+
+        if(!inRecentArray){
+
+            var recentObj ={
+                id:recentArr.length,
+                lessonId: lessonId,
+            };
+            recentArr.push(recentObj);
+            localStorage.setItem("recent", JSON.stringify(recentArr));
+
+        }
+
+    }
+    
+}
+
+function loadLessonData() {
     var lessonArr = JSON.parse(localStorage.getItem("tutorials"));
 
     if(lessonArr!=null){
 
         var lesson = lessonArr[lessonId-1];
 
-        document.getElementById("lesson_video_url").setAttribute("src", lesson.video);
+        if(isLoggedIn()){
+            
+            var logedinUser = JSON.parse(localStorage.getItem("logedInUser"));
+            if(logedinUser.purchased_tutorials != null){
+                
+                var purchasedTutorialObj = logedinUser.purchased_tutorials;
+                for(var cardKey in purchasedTutorialObj){
+                    var card = purchasedTutorialObj[cardKey];
+                    if(card.id == lessonId){
+                        isPurchased = true;
+                        break;
+                    }
+                }
+            }
+
+            if(isPurchased){
+                document.getElementById("lesson_video_url").setAttribute("src", lesson.video);
+                document.getElementById("lesson_video_url").style.display = "block";
+                document.getElementById("lesson-video-cover").style.display = "none";
+            }else{
+                document.getElementById("lesson_video_url").style.display = "none";
+                document.getElementById("lesson-video-cover").style.display = "flex";
+                document.getElementById("lesson-video-cover").style.backgroundColor = "black";
+                document.getElementById("lesson-video-cover").innerHTML= "Please purchase the lesson to view the video";
+                document.getElementById("lesson-video-cover").style.cursor = "pointer";
+                document.getElementById("lesson-video-cover").onclick = function(){
+                    window.location.href = "search.html";
+                }
+            }
+
+        }else{
+            document.getElementById("lesson_video_url").style.display = "none";
+            document.getElementById("lesson-video-cover").style.display = "flex";
+            document.getElementById("lesson-video-cover").style.backgroundColor = "black";
+            document.getElementById("lesson-video-cover").style.cursor = "pointer";
+                document.getElementById("lesson-video-cover").onclick = function(){
+                    window.location.href = "login.html";
+                }
+        }
         document.getElementById("lesson_title").innerHTML = lesson.name;
         document.getElementById("lesson_desc").innerHTML = lesson.description;
         document.getElementById("lesson_by").innerHTML = lesson.chef_name;
+        
 
     }
 
@@ -101,4 +170,10 @@ function loadSuggestions() {
 
 function gotoLesston(lessonid){
     window.location.href = "lesson.html?lesson_id="+lessonid;
+}
+
+function playVideo(event) {
+    event.preventDefault();
+    // event.
+    document.getElementById("lesson_video").play();
 }

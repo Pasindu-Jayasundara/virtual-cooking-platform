@@ -337,3 +337,25 @@ var trending = [
     },
 ];
 localStorage.setItem("trending", JSON.stringify(trending));
+
+if(localStorage.getItem("recent") == null) {
+    var recentlyAccessed = [
+        {
+            id: 1,
+            lessonId: 1,
+        },
+        {
+            id: 2,
+            lessonId: 1,
+        },
+        {
+            id: 3,
+            lessonId: 1,
+        },
+        {
+            id: 4,
+            lessonId: 1,
+        },
+    ];
+    localStorage.setItem("recent", JSON.stringify(recentlyAccessed));
+}
