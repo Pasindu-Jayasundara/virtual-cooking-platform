@@ -76,6 +76,21 @@ function addtoCart(lessonid){
 
     var currentCartArray = JSON.parse(localStorage.getItem("cart"));
 
+    var incart = false;
+
+    if (currentCartArray != null) {
+        for(var i = 0; i < currentCartArray.length; i++){
+            if(currentCartArray[i].lessonId == lessonid){
+                incart = true;
+                break;
+            }
+        }
+    }
+
+    if(incart){
+        alert("Item Already in Cart!");
+        return;
+    }
     var newCartObj = {
         id: currentCartArray.length,
         lessonId: lessonid,

@@ -52,7 +52,7 @@ function gotolesson(id) {
 
 function removeFromCart(place){
     var cartArray = JSON.parse(localStorage.getItem("cart"));
-    cartArray.splice(place, 1);
+    cartArray.splice(place-1, 1);
     localStorage.setItem("cart", JSON.stringify(cartArray));
     loadCartCards();
 }

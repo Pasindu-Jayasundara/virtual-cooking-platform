@@ -23,17 +23,17 @@ window.addEventListener("load", function () {
 
 
 function loadRecentlyAccessed() {
-  var userRecentlyAccessedObj = logedInUser.recently_accessed;
-  if (userRecentlyAccessedObj != null) {
+  var userRecentlyAccessedArr = logedInUser.recently_accessed;
+  if (userRecentlyAccessedArr != null) {
 
     var recentlyAccessedCardList = "";
 
-    for(var cardKey in userRecentlyAccessedObj){
+    for(var cardKey in userRecentlyAccessedArr){
 
-        var card = userRecentlyAccessedObj[cardKey];
+        var card = userRecentlyAccessedArr[cardKey];
         var recentlyAccessedCard = `
             <div class="search-card">
-                <div class="search-card-head"></div>
+                <div class="search-card-head" onclick="gotolesson(${card.id});"></div>
                 <div class="search-card-body">
 
                     <div class="search-card-body-first">
@@ -58,18 +58,22 @@ function loadRecentlyAccessed() {
   }
 }
 
+function gotolesson(lid){
+    window.location.href = "lesson.html?tutorialId="+lid;
+}
+
 function loadPurchasedTutorials() {
-    var purchasedTutorialObj = logedInUser.purchased_tutorials;
-    if (purchasedTutorialObj != null) {
+    var purchasedTutorialArr = logedInUser.purchased_tutorials;
+    if (purchasedTutorialArr != null) {
   
       var purchasedTutorialCardList = "";
   
-      for(var cardKey in purchasedTutorialObj){
+      for(var cardKey in purchasedTutorialArr){
   
-        var card = purchasedTutorialObj[cardKey];
+        var card = purchasedTutorialArr[cardKey];
           var purchasedTutorialCard = `
               <div class="search-card">
-                  <div class="search-card-head"></div>
+                  <div class="search-card-head" onclick="gotolesson(${card.id});"></div>
                   <div class="search-card-body">
   
                       <div class="search-card-body-first">
