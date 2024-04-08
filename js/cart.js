@@ -30,7 +30,7 @@ function loadCartCards(){
                             </div>
                             <div class="cart-card-btn-container">
                                 <div class="cart-remove-btn" onclick="removeFromCart(${place});">Remove</div>
-                                <div class="cart-addto-checkout-btn" onclick="addtoCheckout('${element.name}',${element.price},${element.id});">Add</div>
+                                <div class="cart-addto-checkout-btn" onclick="addtoCheckout('${element.name}',${element.price},${element.id},'${element.related_to}','${element.chef_name}');">Add</div>
                             </div>
                         </div>
                     `;
@@ -60,9 +60,12 @@ function removeFromCart(place){
 var checkoutItemIds = [];
 var checkoutItems = [];
 var checkoutPrices = [];
+var relatedTo = [];
+var chefName = [];
+var priceList = [];
 var total = 0;
 
-function addtoCheckout(name,price,id){
+function addtoCheckout(name,price,id,related_to,chef_name){
 
     if(checkoutItemIds.includes(id)){
         alert("Item Already Added to Checkout!");
@@ -73,6 +76,9 @@ function addtoCheckout(name,price,id){
     checkoutItems.push(name);
     checkoutPrices.push(price);
     checkoutItemIds.push(id);
+    relatedTo.push(related_to);
+    chefName.push(chef_name);
+    priceList.push(price);
 
     var rowList="";
     for (var i = 0; i < checkoutItems.length; i++) {
@@ -94,6 +100,10 @@ function addtoCheckout(name,price,id){
 function cancleCheckout(){
     checkoutItems = [];
     checkoutPrices = [];
+    checkoutItemIds = [];
+    relatedTo = [];
+    chefName = [];
+    priceList = [];
     total = 0;
     document.getElementById("chout").innerHTML = "";
     document.getElementById("total").innerHTML = total;
@@ -112,12 +122,24 @@ function proceedToPay(){
         for (var i = 0; i < checkoutItems.length; i++) {
             itemNameList += checkoutItems[i]+", ";
         }
+
+        // price: lessonPrice,
+        // items: itemName,
+        // logedinUserName: logedinUser.name,
+        // logedinUserEmail: logedinUser.username,
+        // lessonId:lesson_Id,
+        // relatedTo:related_To,
+        // chefName:chef_Name,
     
         var paymentObject = {
             price: total,
-            items: itemNameList,
+            items: checkoutItems,
             logedinUserName: logedinUser.name,
             logedinUserEmail: logedinUser.username,
+            lessonId:checkoutItemIds,
+            relatedTo:relatedTo,
+            chefName:chefName,
+            priceArr: priceList,
         };
     
         pay(paymentObject);

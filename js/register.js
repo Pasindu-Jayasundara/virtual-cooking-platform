@@ -31,65 +31,85 @@ function register() {
         username: email,
         password: password,
         // purchased_tutorials: null,
-        purchased_tutorials: {
-          "1": {
-            name: "How to make a cake",
-            related_to: "American Cuisine",
-            chef_name: "Chef A",
-            lessonId: 1,
-          },
-          "2": {
-            name: "How to make a Bun",
-            related_to: "Australian Cuisine",
-            chef_name: "Chef A",
-            lessonId: 2,
-          },
-          "3": {
-            name: "How to make a cake",
-            related_to: "Sri Lankan Cuisine",
-            chef_name: "Chef A",
-            lessonId: 3,
-          }
-        },
+        purchased_tutorials: [
+          // {
+          //   name: "How to make a cake",
+          //   related_to: "American Cuisine",
+          //   chef_name: "Chef A",
+          //   lessonId: 1,
+          // },
+          // {
+          //   name: "How to make a Bun",
+          //   related_to: "Australian Cuisine",
+          //   chef_name: "Chef A",
+          //   lessonId: 2,
+          // },
+          // {
+          //   name: "How to make a cake",
+          //   related_to: "Sri Lankan Cuisine",
+          //   chef_name: "Chef A",
+          //   lessonId: 3,
+          // }
+        ],
         // payment_history: null,
-        payment_history: {
-          "1": {
-            name: "How to make a cake",
-            chef_name: "Chef A",
-            purchased_date: "2021-09-01",
-            paid_amount: "1000.00"
-          },
-          "2": {
-            name: "How to make a cake",
-            chef_name: "Chef A",
-            purchased_date: "2021-09-01",
-            paid_amount: "1000.00"
-          },
-          "3": {
-            name: "How to make a cake",
-            chef_name: "Chef A",
-            purchased_date: "2021-09-01",
-            paid_amount: "1000.00"
-          }
-        },
+        // payment_history: {
+        //   "1": {
+        //     name: "How to make a cake",
+        //     chef_name: "Chef A",
+        //     purchased_date: "2021-09-01",
+        //     paid_amount: "1000.00"
+        //   },
+        //   "2": {
+        //     name: "How to make a cake",
+        //     chef_name: "Chef A",
+        //     purchased_date: "2021-09-01",
+        //     paid_amount: "1000.00"
+        //   },
+        //   "3": {
+        //     name: "How to make a cake",
+        //     chef_name: "Chef A",
+        //     purchased_date: "2021-09-01",
+        //     paid_amount: "1000.00"
+        //   }
+        // },
+        payment_history: [
+            // {
+            //   name: "How to make a cake",
+            //   chef_name: "Chef A",
+            //   purchased_date: "2021-09-01",
+            //   paid_amount: "1000.00"
+            // },
+            // {
+            //   name: "How to make a cake",
+            //   chef_name: "Chef A",
+            //   purchased_date: "2021-09-01",
+            //   paid_amount: "1000.00"
+            // },
+            // {
+            //   name: "How to make a cake",
+            //   chef_name: "Chef A",
+            //   purchased_date: "2021-09-01",
+            //   paid_amount: "1000.00"
+            // }
+        ],
         // recently_accessed: null,
-        recently_accessed: {
-          "1": {
-            name: "How to make a cake",
-            related_to: "American Cuisine",
-            chef_name: "Chef A"
-          },
-          "2": {
-            name: "How to make a Bun",
-            related_to: "Australian Cuisine",
-            chef_name: "Chef A"
-          },
-          "3": {
-            name: "How to make a cake",
-            related_to: "Sri Lankan Cuisine",
-            chef_name: "Chef A"
-          }
-        },
+        recently_accessed: [
+          // {
+          //   name: "How to make a cake",
+          //   related_to: "American Cuisine",
+          //   chef_name: "Chef A"
+          // },
+          // {
+          //   name: "How to make a Bun",
+          //   related_to: "Australian Cuisine",
+          //   chef_name: "Chef A"
+          // },
+          // {
+          //   name: "How to make a cake",
+          //   related_to: "Sri Lankan Cuisine",
+          //   chef_name: "Chef A"
+          // }
+        ],
         isChef: false,
         // my_tutorials: null
         my_tutorials: [

@@ -55,7 +55,7 @@ function loadSearchLessons() {
 
                         <div class="search-card-footer">
                             <div class="search-card-cart" onclick="addtoCart(${card.id});">Add to Cart</div>
-                            <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}');" id="payhere-payment">Buy Now</div>
+                            <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}',${card.id},'${card.related_to}','${card.chef_name}');" id="payhere-payment">Buy Now</div>
                         </div>
 
                     </div>
@@ -88,7 +88,7 @@ function addtoCart(lessonid){
 
 }
 
-function buyNow(lessonPrice,itemName){
+function buyNow(lessonPrice,itemName,lesson_Id,related_To,chef_Name){
     if(isLoggedIn()) {
         
         var logedinUser = JSON.parse(localStorage.getItem("logedInUser"));
@@ -98,6 +98,9 @@ function buyNow(lessonPrice,itemName){
             items: itemName,
             logedinUserName: logedinUser.name,
             logedinUserEmail: logedinUser.username,
+            lessonId:lesson_Id,
+            relatedTo:related_To,
+            chefName:chef_Name,
         };
 
         pay(paymentObject);
@@ -145,7 +148,7 @@ function loadLessons(){
 
                         <div class="search-card-footer">
                             <div class="search-card-cart" onclick="addtoCart(${card.id});">Add to Cart</div>
-                            <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}');" id="payhere-payment">Buy Now</div>
+                            <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}',${card.id},'${card.related_to}','${card.chef_name}');" id="payhere-payment">Buy Now</div>
                         </div>
 
                     </div>
