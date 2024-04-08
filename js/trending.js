@@ -40,7 +40,7 @@ function loadTrending() {
 
                             <div class="search-card-footer">
                                 <div class="search-card-cart" onclick="addtoCart(${card.id});">Add to Cart</div>
-                                <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}');">Buy Now</div>
+                                <div class="search-card-buy" onclick="buyNow(${card.price},'${card.name}',${card.id},'${card.related_to}','${card.chef_name}');">Buy Now</div>
                             </div>
 
                         </div>
@@ -56,7 +56,27 @@ function loadTrending() {
 
 
 
-function buyNow(lessonPrice,itemName){
+//function buyNow(lessonPrice,itemName){
+//    if(isLoggedIn()) {
+        
+//        var logedinUser = JSON.parse(localStorage.getItem("logedInUser"));
+
+//        var paymentObject = {
+//            price: lessonPrice,
+//            items: itemName,
+//            logedinUserName: logedinUser.name,
+//            logedinUserEmail: logedinUser.username,
+//        };
+
+//        pay(paymentObject);
+
+//    }else{
+//        alert("Please Login First!");
+//        window.location.href = "login.html";
+//    }
+//}
+
+function buyNow(lessonPrice,itemName,lesson_Id,related_To,chef_Name){
     if(isLoggedIn()) {
         
         var logedinUser = JSON.parse(localStorage.getItem("logedInUser"));
@@ -66,6 +86,9 @@ function buyNow(lessonPrice,itemName){
             items: itemName,
             logedinUserName: logedinUser.name,
             logedinUserEmail: logedinUser.username,
+            lessonId:lesson_Id,
+            relatedTo:related_To,
+            chefName:chef_Name,
         };
 
         pay(paymentObject);
@@ -76,10 +99,42 @@ function buyNow(lessonPrice,itemName){
     }
 }
 
+
+//function addtoCart(lessonid){
+
+//    var currentCartArray = JSON.parse(localStorage.getItem("cart"));
+
+//    var newCartObj = {
+//        id: currentCartArray.length,
+//        lessonId: lessonid,
+//    };
+
+//    currentCartArray.push(newCartObj);
+//    localStorage.setItem("cart", JSON.stringify(currentCartArray));
+
+//    alert("Item Added to Cart!");
+
+//}
+
 function addtoCart(lessonid){
 
     var currentCartArray = JSON.parse(localStorage.getItem("cart"));
 
+    var incart = false;
+
+    if (currentCartArray != null) {
+        for(var i = 0; i < currentCartArray.length; i++){
+            if(currentCartArray[i].lessonId == lessonid){
+                incart = true;
+                break;
+            }
+        }
+    }
+
+    if(incart){
+        alert("Item Already in Cart!");
+        return;
+    }
     var newCartObj = {
         id: currentCartArray.length,
         lessonId: lessonid,
@@ -91,6 +146,7 @@ function addtoCart(lessonid){
     alert("Item Added to Cart!");
 
 }
+
 function gotolesson(id) {
     window.location.href = "lesson.html?tutorialId="+id;
 }
