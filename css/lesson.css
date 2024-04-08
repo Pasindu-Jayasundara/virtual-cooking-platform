@@ -150,13 +150,13 @@
 }
 .lesson-right-panel {
   width: 20%;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 108px;
   align-items: center;
   padding-top: 20px;
+  overflow-y: scroll;
 }
 .lesson-suggest-container {
   width: 100%;
@@ -164,6 +164,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  max-height: 100vh;
 }
 .lesson-suggest-1-container {
   width: 90%;

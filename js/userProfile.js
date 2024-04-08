@@ -23,7 +23,6 @@ window.addEventListener("load", function () {
 
 
 function loadRecentlyAccessed() {
-    
   var userRecentlyAccessedArr = logedInUser.recently_accessed;
   if (userRecentlyAccessedArr != null) {
 
@@ -43,7 +42,7 @@ function loadRecentlyAccessed() {
         
         var recentlyAccessedCard = `
             <div class="search-card">
-                <div class="search-card-head" onclick="gotolesson(${card.id});"></div>
+                <div class="search-card-head" onclick="gotolesson(${card.id});" style="background-image:url(${card.image});"></div>
                 <div class="search-card-body">
 
                     <div class="search-card-body-first">
@@ -92,7 +91,7 @@ function loadPurchasedTutorials() {
 
           var purchasedTutorialCard = `
               <div class="search-card">
-                  <div class="search-card-head" onclick="gotolesson(${card.id});"></div>
+                  <div class="search-card-head" onclick="gotolesson(${card.id});" style="background-image:url(${card.image});"></div>
                   <div class="search-card-body">
   
                       <div class="search-card-body-first">

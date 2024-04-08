@@ -17,8 +17,6 @@ window.addEventListener("load", function () {
         loadSuggestions();
         addToRecent();
     }
-
-
 });
 
 function addToRecent(){
@@ -27,6 +25,7 @@ function addToRecent(){
     var recentArr = logedInUser.recently_accessed;
 
     if(recentArr != null){
+        console.log(recentArr);
         var inRecentArray = false;
 
         for(var i=0; i<recentArr.length; i++){
@@ -125,7 +124,6 @@ function loadLessonReviews(){
     if(reviewArr!=null){
 
         var reviewCardList = "";
-        var userObj = JSON.parse(localStorage.getItem("users"));
 
         reviewArr.forEach(reviewObj => {
             
@@ -133,9 +131,9 @@ function loadLessonReviews(){
                 
                 var reviewCard = `
                     <div class="lesson-comment">
-                        <div class="lesson-comment-user-image" style="background-image:url(${userObj[reviewObj.userEmail].image});"></div>
+                        <div class="lesson-comment-user-image" style="background-image:url('../resources/images/emptyProfile.png');"></div>
                         <div class="lesson-name-and-comment">
-                            <div class="lesson-comment-user-name">${userObj[reviewObj.userEmail].name}</div>
+                            <div class="lesson-comment-user-name">${reviewObj.name}</div>
                             <div class="lesson-comment-user-comment">
                                 ${reviewObj.review}  
                             </div>
