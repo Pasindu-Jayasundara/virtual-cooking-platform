@@ -118,27 +118,27 @@ function loadPurchasedTutorials() {
 }
 
 function loadPaymentHistory() {
-    var paymentHistoryObj = logedInUser.payment_history;
-    if (paymentHistoryObj != null) {
+    var paymentHistoryArr = logedInUser.payment_history;
+    if (paymentHistoryArr != null) {
   
       var paymentHistoryCardList = "";
   
-      for(var cardKey in paymentHistoryObj){
+      for(var i=0; i<paymentHistoryArr.length; i++){
   
-        var card = paymentHistoryObj[cardKey];
+        var card = paymentHistoryArr[i];
           var paymentHistoryCard = `
             <div class="up-history-card">
                 <div class="up-history-text">
-                    <span class="up-history-title">Tutorial : </span>${card.name}
+                    <span class="up-history-title">Tutorial : </span>${card.items}
                 </div>
                 <div class="up-history-text">
-                    <span class="up-history-title">Cheff : </span>${card.chef_name}
+                    <span class="up-history-title">Cheff : </span>${card.chefName}
                 </div>
                 <div class="up-history-text">
-                    <span class="up-history-title">At : </span>${card.purchased_date}
+                    <span class="up-history-title">Order Id : </span>${card.order_id}
                 </div>
                 <div class="up-history-text">
-                    <span class="up-history-title">Paid : </span>${card.paid_amount}
+                    <span class="up-history-title">Paid : </span>${card.price}
                 </div>
             </div>
           `;

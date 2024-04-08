@@ -392,7 +392,7 @@ function addToPurchasedTutorial(purchasedObject,order_id) {
 
     if(Array.isArray(purchasedObject.items)){
         
-        for (var i = 0; i < paymentDetails.items.length; i++) {
+        for (var i = 0; i < purchasedObject.items.length; i++) {
             
             var purchasedTutorialObject = {
                 id: purchasedObject.order_id,
@@ -439,9 +439,9 @@ function addToPaymentHistory(purchasedObject,order_id){
     var logedInUser = JSON.parse(localStorage.getItem("logedInUser"));
 
     if(Array.isArray(purchasedObject.items)){
-        
+
         for (var i = 0; i < purchasedObject.items.length; i++) {
-            
+
             var paymentObject = {
                 order_id: order_id,
                 price: purchasedObject.priceArr[i],
@@ -453,7 +453,7 @@ function addToPaymentHistory(purchasedObject,order_id){
                 chefName:purchasedObject.chefName[i],
             };
 
-            logedInUser.payment_history.push(paymentHistoryObject);
+            logedInUser.payment_history.push(paymentObject);
 
         }
     }else{
@@ -468,10 +468,9 @@ function addToPaymentHistory(purchasedObject,order_id){
             chefName:purchasedObject.chefName,
         };
 
-        logedInUser.payment_history.push(paymentHistoryObject);
-    }
+        logedInUser.payment_history.push(paymentObject);
 
-    logedInUser.payment_history.push(paymentObject);
+    }
 
     localStorage.setItem("logedInUser", JSON.stringify(logedInUser));
 
