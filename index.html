@@ -74,26 +74,19 @@
 
         <section class="home-body">
             <main class="home-body-main">
-                <!-- <div class="cover-screen-1" id="cover-screen-1">
-                    <div class="cover-logo"></div>
-                    <div class="cover-name">Website Name</div>
-                    <div class="cover-desc">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus tempora
-                        non porro mollitia? Dicta itaque maxime dolor cupiditate tempore nulla, id sequi, quis repellat
-                        non dolore, mollitia doloremque esse accusamus
-                    </div>
-                </div> -->
+
                 <div class="cover-screen-2" id="cover-screen-1">
                     <div class="desc">
                         <div class="premium"># Premium Cooking Class</div>
                         <div class="world">World best Cooking platform</div>
                         <div class="btn-group">
-                            <button class="cook-btn">Cook with us</button>
-                            <button class="cook-btn">get recipe</button>
+                            <button class="cook-btn" onclick="window.location.href='search.html';">Cook with us</button>
+                            <button class="cook-btn" onclick="window.location.href='trending.html';">Trending</button>
                         </div>
                     </div>
-                    <div class="trending-card">
-                        <div class="countdown">Offer ends in : <span class="time">22 : 55 : 10</span></div>
+                    <div class="trending-card" id="countdowncard">
+                        <div class="countdown">Offer ends in : <span class="time" id="countdowncardTime">22 : 55 :
+                                10</span></div>
                         <div class="video">
                             <div class="outer-ring">
                                 <div class="inner-ring">
@@ -102,9 +95,9 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <div class="food-name">Food Name</div>
+                            <div class="food-name">Bake Stake</div>
                             <div class="get-offer-btn-div">
-                                <button>Get offer</button>
+                                <button onclick="window.location.href='trending.html';">Get offer</button>
                             </div>
                         </div>
                     </div>
@@ -115,12 +108,12 @@
                     <div class="online-class"># Online Class</div>
                     <div class="learn">Learn How To Cook From Your Home</div>
                     <div class="learn-desc">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima saepe molestias assumenda
-                        repudiandae odit necessitatibus inventore praesentium, eveniet ducimus placeat tenetur,
-                        provident eos earum exercitationem itaque non voluptate. Fugit, autem.
+                        Embark on a culinary journey from the comfort of your own kitchen with our virtual cooking
+                        platform. Explore a world of recipes, expert guidance, and interactive cooking classes tailored
+                        to elevate your skills and passion for cooking, all accessible from the convenience of home
                     </div>
                     <div class="get-started">
-                        <button>Get started</button>
+                        <button onclick="window.location.href='register.html';">Get started</button>
                     </div>
                 </div>
                 <div class="ss-image-div">
@@ -133,13 +126,13 @@
                         <div class="online-class cook-them-all"># We'll Cook Them All</div>
                         <div class="learn easy-to-hard">From Easy Meal To Exquisite Dish</div>
                         <div class="food-container">
-                            <div class="food-card">
+                            <div class="food-card" onclick="window.location.href='search.html';">
                                 <div class="food-card-header">
-                                    <div class="food-card-image">
+                                    <div class="food-card-image fci-1">
                                         <div class="food-card-play-button"></div>
                                     </div>
                                 </div>
-                                <div class="food-card-name">Ratatuile</div>
+                                <div class="food-card-name">Lobster Thermidor</div>
                                 <div class="range-div">
                                     <div class="range-box">
                                         <label class="range-title">Difficulty</label>
@@ -168,13 +161,13 @@
                                 </div>
                             </div>
 
-                            <div class="food-card">
+                            <div class="food-card" onclick="window.location.href='search.html';">
                                 <div class="food-card-header">
-                                    <div class="food-card-image">
+                                    <div class="food-card-image fci-2">
                                         <div class="food-card-play-button"></div>
                                     </div>
                                 </div>
-                                <div class="food-card-name">Ratatuile</div>
+                                <div class="food-card-name">Beef Wellington</div>
                                 <div class="range-div">
                                     <div class="range-box">
                                         <label class="range-title">Difficulty</label>
@@ -203,13 +196,13 @@
                                 </div>
                             </div>
 
-                            <div class="food-card">
+                            <div class="food-card" onclick="window.location.href='search.html';">
                                 <div class="food-card-header">
-                                    <div class="food-card-image">
+                                    <div class="food-card-image fci-3">
                                         <div class="food-card-play-button"></div>
                                     </div>
                                 </div>
-                                <div class="food-card-name">Ratatuile</div>
+                                <div class="food-card-name">Coq au Vin</div>
                                 <div class="range-div">
                                     <div class="range-box">
                                         <label class="range-title">Difficulty</label>
@@ -249,12 +242,13 @@
                     <div class="online-class"># Culinary Course</div>
                     <div class="learn">Master The Art Of Cooking With Chef</div>
                     <div class="learn-desc">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima saepe molestias assumenda
-                        repudiandae odit necessitatibus inventore praesentium, eveniet ducimus placeat tenetur,
-                        provident eos earum exercitationem itaque non voluptate. Fugit, autem.
+                        Master the art of cooking with our expert chefs, guiding you through culinary excellence. Dive
+                        into a world of flavors, techniques, and creativity as our chefs share their expertise honed
+                        from years of experience. Explore diverse cuisines, refine your skills, and unleash your inner
+                        chef with our guidance, right from the comfort of your kitchen
                     </div>
                     <div class="get-started">
-                        <button>Join Course</button>
+                        <button onclick="window.location.href='register.html';">Join Course</button>
                     </div>
                 </div>
 
@@ -265,35 +259,35 @@
                         <div class="fs-title">Our Chefs</div>
                         <div class="chef-card-container">
                             <div class="chef-card">
-                                <div class="chef-card-head"></div>
+                                <div class="chef-card-head ch-1"></div>
                                 <div class="chef-card-body">
-                                    <div class="chef-card-name">Chef Name</div>
-                                    <div class="chef-card-position">Lead chef</div>
+                                    <div class="chef-card-name">Chef Alessandro Rossi</div>
+                                    <div class="chef-card-position">Master of Global Flavors</div>
                                     <div class="chef-card-desc">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A illum veniam hic
-                                        ducimus enim neque quia omni
+                                        Chef Alessandro Rossi brings the world to your kitchen with his expertise in
+                                        international cuisines
                                     </div>
                                 </div>
                             </div>
                             <div class="chef-card">
-                                <div class="chef-card-head"></div>
+                                <div class="chef-card-head ch-2"></div>
                                 <div class="chef-card-body">
-                                    <div class="chef-card-name">Chef Name</div>
-                                    <div class="chef-card-position">Lead chef</div>
+                                    <div class="chef-card-name">Chef Maya Patel</div>
+                                    <div class="chef-card-position">Wellness Kitchen Guru</div>
                                     <div class="chef-card-desc">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A illum veniam hic
-                                        ducimus enim neque quia omni
+                                        Chef Maya Patel is your guide to nutritious and delicious meals. With a focus on
+                                        healthy ingredients and mindful cooking techniques
                                     </div>
                                 </div>
                             </div>
                             <div class="chef-card">
-                                <div class="chef-card-head"></div>
+                                <div class="chef-card-head ch-3"></div>
                                 <div class="chef-card-body">
-                                    <div class="chef-card-name">Chef Name</div>
-                                    <div class="chef-card-position">Lead chef</div>
+                                    <div class="chef-card-name">Chef Xavier Delacroix</div>
+                                    <div class="chef-card-position">Sweet Symphony Maestro</div>
                                     <div class="chef-card-desc">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A illum veniam hic
-                                        ducimus enim neque quia omni
+                                        Indulge your sweet tooth with Chef Xavier Delacroix's decadent creations. From
+                                        exquisite pastries to heavenly desserts
                                     </div>
                                 </div>
                             </div>
@@ -306,19 +300,21 @@
                     <div class="online-class"># Our Associate</div>
                     <div class="learn">In Partnership With</div>
                     <div class="learn-desc ss-desc">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima saepe molestias assumenda
-                        repudiandae odit necessitatibus inventore praesentium, eveniet ducimus placeat tenetur,
-                        provident eos earum exercitationem itaque non voluptate. Fugit, autem.
+                        Discover our esteemed partners who enrich your culinary journey with expertise and quality. From
+                        sourcing the freshest ingredients to providing premium cookware, our partners ensure that every
+                        aspect of your cooking experience is elevated to perfection. Explore our collaborations with
+                        leading names in the food and beverage industry, and embark on a flavorful adventure with
+                        confidence and convenience
                     </div>
                 </div>
                 <div class="ss-image-container">
-                    <div class="ss-partner-image"></div>
-                    <div class="ss-partner-image"></div>
-                    <div class="ss-partner-image"></div>
-                    <div class="ss-partner-image"></div>
-                    <div class="ss-partner-image"></div>
-                    <div class="ss-partner-image"></div>
-                    <div class="ss-partner-image"></div>
+                    <div class="ss-partner-image p1"></div>
+                    <div class="ss-partner-image p2"></div>
+                    <div class="ss-partner-image p3"></div>
+                    <div class="ss-partner-image p4"></div>
+                    <div class="ss-partner-image p5"></div>
+                    <div class="ss-partner-image p6"></div>
+                    <div class="ss-partner-image p7"></div>
                 </div>
             </section>
             <section class="seventh-section">
@@ -329,11 +325,13 @@
                     <div class="online-class"># From Our Students</div>
                     <div class="learn">Best Culinary Course</div>
                     <div class="learn-desc ss-desc quote">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima saepe molestias assumenda
-                        repudiandae odit necessitatibus inventore praesentium, eveniet ducimus placeat tenetur,
-                        provident eos earum exercitationem itaque non<br />
+                        It is equally important to mention the history when we curate dishes. While it's great to go to
+                        ethnic markets, grab a whole bunch of ingredients, and throw them into a pot, you can't call it
+                        or rename it a soup or stew without crediting where you got those ingredients from. For anyone
+                        to just add an ingredient thinking you're making a dish, it's important that you highlight the
+                        origins, feel and embrace the culture<br />
                     </div>
-                    <div class="quote-name">Norman Bendell</div>
+                    <div class="quote-name">Millie Peartree</div>
                 </div>
             </section>
         </section>
@@ -348,6 +346,7 @@
                         community and elevate your cooking experience today!
                     </div>
                     <ul class="footer-nav">
+                        <li onclick="window.location.href='faq.html';">FAQ</li>
                         <li onclick="window.location.href='contact_us.html';">Contact Us</li>
                         <li onclick="window.location.href='terms_and_condition.html';">Terms and Conditions</li>
                     </ul>

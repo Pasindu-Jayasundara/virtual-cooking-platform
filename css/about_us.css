@@ -86,6 +86,30 @@
 .au-testimonial,.au-partnership{
     margin-top: -100px;
 }
+.of-1{
+  background-image: url("../resources/images/au4.png");
+}
+.p1{
+  background-image: url("../resources/images/p1.jpg");
+}
+.p2{
+  background-image: url("../resources/images/p2.jpg");
+}
+.p3{
+  background-image: url("../resources/images/p3.jpg");
+}
+.p4{
+  background-image: url("../resources/images/p4.jpg");
+}
+.p5{
+  background-image: url("../resources/images/p5.jpg");
+}
+.p6{
+  background-image: url("../resources/images/p6.jpg");
+}
+.p7{
+  background-image: url("../resources/images/p7.jpg");
+}
 
 @media (max-width:576px) {
     .au-body-container{

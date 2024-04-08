@@ -581,7 +581,7 @@ nav > ul > li:hover {
 }
 .range-fill-1 {
   background-color: var(--easy-range-color);
-  width: 40%;
+  width: 50%;
 }
 .range-fill-2 {
   background-color: var(--moderate-range-color);
@@ -731,7 +731,7 @@ nav > ul > li:hover {
   align-items: center;
 }
 .ss-person-image {
-  background-image: url("../resources/images/p2.png");
+  background-image: url("../resources/images/w1.png");
   border-radius: 20%;
 }
 .ss-quote-container {
@@ -839,4 +839,43 @@ footer {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
+}
+.fci-1{
+  background-image: url("../resources/images/home1.png");
+}
+.fci-2{
+  background-image: url("../resources/images/home2.png");
+}
+.fci-3{
+  background-image: url("../resources/images/home3.png");
+}
+.ch-1{
+  background-image: url("../resources/images/ch1.png");
+}
+.ch-2{
+  background-image: url("../resources/images/ch2.png");
+}
+.ch-3{
+  background-image: url("../resources/images/ch3.png");
+}
+.p1{
+  background-image: url("../resources/images/p1.jpg");
+}
+.p2{
+  background-image: url("../resources/images/p2.jpg");
+}
+.p3{
+  background-image: url("../resources/images/p3.jpg");
+}
+.p4{
+  background-image: url("../resources/images/p4.jpg");
+}
+.p5{
+  background-image: url("../resources/images/p5.jpg");
+}
+.p6{
+  background-image: url("../resources/images/p6.jpg");
+}
+.p7{
+  background-image: url("../resources/images/p7.jpg");
 }

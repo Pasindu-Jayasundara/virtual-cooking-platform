@@ -48,6 +48,7 @@
   word-spacing: 10px;
   margin-bottom: 60px;
   color: orange;
+  text-wrap: nowrap;
 }
 .login_txtBox_area {
   display: flex;
@@ -124,14 +125,9 @@
   text-align: center;
   line-height: 1.5;
 }
-.register-form-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.278);
-  padding: 0;
-}
+/* .reg{
+  flex-direction: row-reverse;
+} */
 .register-heading {
   width: 100%;
   text-align: center;
