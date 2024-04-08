@@ -49,7 +49,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 50px;
+  width: 40px;
   aspect-ratio: 1/1;
   /* background-color: blue; */
   border-radius: 50%;
@@ -798,6 +798,7 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   width: 60%;
+  line-height: 30px;
 }
 .footer-nav {
   color: white;
@@ -809,6 +810,12 @@ footer {
   justify-content: center;
   list-style: none;
   line-height: 35px;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.footer-nav>li:hover{
+  transition-duration: .5s;
+  color: rgb(255, 192, 3);
 }
 .footer-nav > ul {
   cursor: pointer;

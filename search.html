@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search | Webpage Name</title>
+    <title>Search | CookHub</title>
+    <link rel="icon" href="./resources/images/logo.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./css/search.css" />
@@ -19,21 +20,22 @@
     <div class="search-container">
 
         <header>
-            <div class="logo-and-name">
+            <div class="logo-and-name" onclick="window.location.href='index.html';">
                 <div class="logo"></div>
-                <span class="website-name">Website name</span>
+                <span class="website-name">CookHub</span>
             </div>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Trending</li>
-                    <li>Subscription</li>
-                    <li>Contact Us</li>
+                    <li onclick="window.location='index.html';">Home</li>
+                    <li onclick="window.location='trending.html';">Trending</li>
+                    <li onclick="window.location='chef.html';">Chefs</li>
+                    <li onclick="window.location='cart.html';">Cart</li>
+                    <li onclick="window.location='about_us.html';">About Us</li>
                 </ul>
             </nav>
             <div class="profile-and-search">
                 <div class="search-btn">
-                    <i class="bi bi-search search-icon"></i>
+                    <i class="bi bi-search search-icon" onclick="window.location='search.html';"></i>
                     <input type="text" class="search-input" />
                 </div>
                 <div class="button-and-profile">
@@ -48,15 +50,16 @@
             <div class="small-menu-display" id="small-menu">
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>Trending</li>
-                        <li>Subscription</li>
-                        <li>Contact Us</li>
+                        <li onclick="window.location='index.html';">Home</li>
+                        <li onclick="window.location='trending.html';">Trending</li>
+                        <li onclick="window.location='chef.html';">Chefs</li>
+                        <li onclick="window.location='cart.html';">Cart</li>
+                        <li onclick="window.location='about_us.html';">About Us</li>
                     </ul>
                 </nav>
                 <div class="profile-and-search">
                     <div class="search-btn">
-                        <i class="bi bi-search search-icon"></i>
+                        <i class="bi bi-search search-icon" onclick="window.location='search.html';"></i>
                         <input type="text" class="search-input" />
                     </div>
                     <div class="button-and-profile">
@@ -72,7 +75,7 @@
             <div class="search-left-bar-container">
 
                 <div class="search-input-div">
-                    <input type="text" class="search-input-search" placeholder="Search" id="search_search_input"/>
+                    <input type="text" class="search-input-search" placeholder="Search" id="search_search_input" />
                     <i class="bi bi-search search-icon-search"></i>
                 </div>
 
@@ -341,24 +344,23 @@
             <div class="footer-inner-container">
                 <div class="footer-logo"></div>
                 <div class="footer-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam temporibus optio voluptate, ex
-                    tenetur animi quas vitae molestias, sunt quia sequi autem eaque possimus quasi! Cum minus ea
-                    illo impedit!
+                    Explore, cook, and share culinary delights with our virtual cooking platform. Discover recipes,
+                    connect with chefs, and indulge in a world of flavors right from your kitchen. Join our
+                    community and elevate your cooking experience today!
                 </div>
                 <ul class="footer-nav">
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Privacy Policy</li>
-                    <li>Locaation</li>
+                    <li onclick="window.location.href='contact_us.html';">Contact Us</li>
+                    <li onclick="window.location.href='terms_and_condition.html';">Terms and Conditions</li>
                 </ul>
             </div>
         </div>
         <div class="footer-end">
             <hr class="footer-hr">
-            <div class="copyright">© 2024 Website Name. All rights reserved</div>
+            <div class="copyright">© 2024 CookHub. All rights reserved</div>
         </div>
     </footer>
 
+    <script src="./js/header.js"></script>
     <script src="./js/search.js"></script>
 </body>
 
