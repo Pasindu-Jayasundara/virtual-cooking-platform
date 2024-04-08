@@ -6,11 +6,11 @@ function register() {
 
   if (name.trim() == "") {
     alert("Please enter your name");
-  } else if (email.trim() == "" && !validateEmail(email)) {
+  } else if (email.trim() == "" || !validateEmail(email)) {
     alert("Invalid email format. Please enter a valid email address");
-  } else if (password.trim() == "" && !validatePassword(password)) {
+  } else if (password.trim() == "" || !validatePassword(password)) {
     alert("Invalid password format");
-  } else if (re_password.trim() == "" && password != re_password) {
+  } else if (re_password.trim() == "" || password != re_password) {
     alert("Passwords do not match");
   } else {
     if (!isUsersAvaliable()) {

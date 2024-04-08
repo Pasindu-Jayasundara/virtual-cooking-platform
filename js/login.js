@@ -3,9 +3,9 @@ function login(){
     var email = document.getElementById("login_uname").value;
     var password = document.getElementById("login_pass").value;
 
-    if(email.trim()=="" && !validateEmail(email)){
+    if(email.trim()=="" || !validateEmail(email)){
         alert("Invalid email format");
-    }else if(password.trim()=="" && !validatePassword(password)){
+    }else if(password.trim()=="" || !validatePassword(password)){
         alert("Invalid password format");
     }else{
 

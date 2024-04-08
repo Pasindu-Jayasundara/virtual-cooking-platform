@@ -245,7 +245,7 @@ var tutorialArr = [
     },
     {
         id: 7,
-        name: "BBQ Pulled Pork Sandwiches",
+        name: "BBQ Pork Sandwiches",
         image: "../resources/food/7.png",
         video: "https://www.youtube.com/embed/cMUZxpBZqCo?si=gviP853OUfT_peSt",
         price: "76.00",
