@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
 
     <link rel="stylesheet" href="./css/contact_us.css" />
+    <script src="./js/common.js"></script>
 </head>
 
 <body>
@@ -99,22 +100,24 @@
                     <form class="contact-field-container">
                         <div class="contact-field">
                             <label class="contact-form-label">Name</label>
-                            <input type="text" class="contact-form-input">
+                            <input type="text" class="contact-form-input" id="cu_name">
                         </div>
                         <div class="contact-field">
                             <label class="contact-form-label">City</label>
-                            <input type="text" class="contact-form-input">
+                            <input type="text" class="contact-form-input" id="cu_city">
                         </div>
                         <div class="contact-field">
                             <label class="contact-form-label">Email</label>
-                            <input type="text" class="contact-form-input">
+                            <input type="text" class="contact-form-input" id="cu_email">
                         </div>
                         <div class="contact-field">
                             <label class="contact-form-label">Message</label>
-                            <textarea class="contact-form-input contact-textarea"></textarea>
+                            <textarea class="contact-form-input contact-textarea" id="cu_message"></textarea>
                         </div>
                         <div>
-                            <div class="contact-btn">submit</div>
+                            <div class="contact-btn" onclick="sendEmail();">submit</div>
+                            <a href="" style="display: none;" id="sendEmailA">Send
+                                Email</a>
                         </div>
                     </form>
 
