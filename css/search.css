@@ -115,6 +115,7 @@
   backdrop-filter: blur(15px);
   padding-inline: 50px;
   padding-top: 107px;
+  overflow-y: scroll;
 }
 .search-display-section {
   width: 100%;

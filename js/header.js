@@ -13,3 +13,10 @@ function smallMenu() {
     showSmallMenu = true;
   }
 }
+function myAccount(){
+  if(localStorage.getItem("logedInUser")==null){
+    window.location.href = "login.html";
+  }else{
+    window.location.href = "user_profile.html";
+  }
+}

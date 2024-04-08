@@ -132,7 +132,7 @@ var chefArray = [
         numberOfTutorials: 5,
         experience: 15,
         desc:"Award-winning chef specializing in Latin American cuisine, known for her vibrant flavors and innovative cooking techniques",
-        image: "../resources/chef/1.png",
+        image: "../resources/chef/1.jpg",
     },
     {
         id: 2,
@@ -141,7 +141,7 @@ var chefArray = [
         numberOfTutorials: 5,
         experience: 20,
         desc:"Renowned French chef with expertise in classical French cuisine, trained in Michelin-starred restaurants across France",
-        image: "../resources/chef/2.png",
+        image: "../resources/chef/2.jpg",
     },
     {
         id: 3,
@@ -150,7 +150,7 @@ var chefArray = [
         numberOfTutorials: 5,
         experience: 10,
         desc:"Master of authentic Chinese cuisine, blending traditional techniques with modern twists, known for her exquisite dim sum and Sichuan specialties",
-        image: "../resources/chef/3.png",
+        image: "../resources/chef/3.jpg",
     },
     {
         id: 4,
@@ -159,7 +159,7 @@ var chefArray = [
         numberOfTutorials: 5,
         experience: 10,
         desc:"Italian culinary maestro specializing in regional Italian cuisine, from hearty Tuscan dishes to delicate Venetian seafood",
-        image: "../resources/chef/4.png",
+        image: "../resources/chef/4.jpg",
     },
     {
         id: 5,
@@ -168,7 +168,7 @@ var chefArray = [
         numberOfTutorials: 5,
         experience: 12,
         desc:"Brazilian culinary artist renowned for her innovative approach to traditional Brazilian cuisine, blending indigenous flavors with contemporary flair",
-        image: "../resources/chef/5.png",
+        image: "../resources/chef/5.jpg",
     },
 ];
 localStorage.setItem("chefs", JSON.stringify(chefArray));
