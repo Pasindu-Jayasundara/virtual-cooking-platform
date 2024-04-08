@@ -61,10 +61,16 @@ function loadLessonData() {
             var logedinUser = JSON.parse(localStorage.getItem("logedInUser"));
             if(logedinUser.purchased_tutorials != null){
                 
-                var purchasedTutorialObj = logedinUser.purchased_tutorials;
-                for(var cardKey in purchasedTutorialObj){
-                    var card = purchasedTutorialObj[cardKey];
-                    if(card.id == lessonId){
+                var purchasedTutorialArr = logedinUser.purchased_tutorials;
+                // for(var cardKey in purchasedTutorialObj){
+                //     var card = purchasedTutorialObj[cardKey];
+                //     if(card.id == lessonId){
+                //         isPurchased = true;
+                //         break;
+                //     }
+                // }
+                for(var i=0; i<purchasedTutorialArr.length; i++){
+                    if(purchasedTutorialArr[i].id == lessonId){
                         isPurchased = true;
                         break;
                     }
@@ -174,6 +180,5 @@ function gotoLesston(lessonid){
 
 function playVideo(event) {
     event.preventDefault();
-    // event.
-    document.getElementById("lesson_video").play();
+    // document.getElementById("lesson_video").play();
 }
