@@ -131,7 +131,7 @@ function loadLessonReviews(){
                 
                 var reviewCard = `
                     <div class="lesson-comment">
-                        <div class="lesson-comment-user-image" style="background-image:url('../resources/images/emptyProfile.png');"></div>
+                        <div class="lesson-comment-user-image" style="background-image:url('/uor_web_sem1_gpp/resources/images/emptyProfile.png');"></div>
                         <div class="lesson-name-and-comment">
                             <div class="lesson-comment-user-name">${reviewObj.name}</div>
                             <div class="lesson-comment-user-comment">
