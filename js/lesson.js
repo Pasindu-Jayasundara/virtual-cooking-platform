@@ -170,7 +170,7 @@ function loadSuggestions() {
             var card = lessonArr[id];
             var suggestCard = `
                 <div class="lesson-suggest-1-container" onclick="gotoLesston(${card.id});">
-                    <div class="suggest-lesson-image" style="background-image:url(${card.image});"></div>
+                    <div class="suggest-lesson-image" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});"></div>
                     <div class="suggest-lesson-name">${card.name}</div>
                 </div>
             `;
