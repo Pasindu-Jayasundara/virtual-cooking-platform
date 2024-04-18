@@ -127,7 +127,7 @@ function loadChefDetails(id) {
 
   document.getElementById("cpChefName").innerHTML = chef.name;
   document.getElementById("cpChefDesc").innerHTML = chef.desc;
-  document.getElementById("cpChefImage").style.backgroundImage = "url(" + chef.image + ")";
+  document.getElementById("cpChefImage").style.backgroundImage = "url(" + chef.image.replace("..","/uor_web_sem1_gpp") + ")";
 
 }
 
