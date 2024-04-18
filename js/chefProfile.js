@@ -152,7 +152,7 @@ function loadChefTutorials(id){
       var card = chefTutorialArr[cardId];
       var chefTutorialCard = `
               <div class="search-card" onclick="goToTutorial(${card.id});">
-                  <div class="search-card-head" style="background-image:url(${card.image});"></div>
+                  <div class="search-card-head" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});"></div>
                   <div class="search-card-body">
   
                       <div class="search-card-body-first">
