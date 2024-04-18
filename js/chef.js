@@ -27,7 +27,7 @@ function loadChefs() {
             var chefCard = `
                 <div class="chef-card" onclick="gotoChefProfile(${card.id});">
     
-                    <div class="chef-card-header" style="background-image: url(${card.image.replce("..","")});"></div>
+                    <div class="chef-card-header" style="background-image: url(${card.image.replce("..","/uor_web_sem1_gpp")});"></div>
 
                     <div class="chef-card-body">
                         <div class="chef-tutorial-wrap">
