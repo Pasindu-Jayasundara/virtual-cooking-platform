@@ -37,7 +37,7 @@ function loadSearchLessons() {
             var card = tutorialArr[id];
             var searchCard = `
                 <div class="search-card">
-                    <div class="search-card-head" style="background-image:url(${card.image});" onclick="goto_lesson(${card.id});"></div>
+                    <div class="search-card-head" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});" onclick="goto_lesson(${card.id});"></div>
                     <div class="search-card-body">
 
                         <div class="search-card-body-first">
@@ -145,7 +145,7 @@ function loadLessons(){
             var card = tutorialArray[id];
             var searchCard = `
                 <div class="search-card">
-                    <div class="search-card-head" style="background-image:url(${card.image});" onclick="goto_lesson(${card.id});"></div>
+                    <div class="search-card-head" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});" onclick="goto_lesson(${card.id});"></div>
                     <div class="search-card-body">
 
                         <div class="search-card-body-first">
