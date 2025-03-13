@@ -1,6 +1,15 @@
 const mongoose = require('mongoose');
+const schema = mongoose.Schema;
+const objectId = schema.Types.ObjectId;
 
-const userSchema = new mongoose.Schema({
+const cartSchema = new schema({
+    tutorialId:{
+        type:objectId,
+        required:true
+    }
+});
+
+const userSchema = new schema({
     name: {
         type: String,
         required: true
@@ -17,26 +26,27 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
-    purchased_tutorials: {
+    purchasedTutorials: {
         type: Array,
         required: true
     },
-    payment_history: {
+    paymentHistory: {
         type: Array,
         required: true
     },
-    recently_accessed: {
+    recentlyAccessed: {
         type: Array,
         required: true
     },
-    my_tutorials: {
+    myTutorials: {
         type: Array,
         required: true
     },
     image: {
         type: String,
         required: true
-    }
+    },
+    cart:[cartSchema]
 });
 
 module.exports = mongoose.model('User', userSchema);
