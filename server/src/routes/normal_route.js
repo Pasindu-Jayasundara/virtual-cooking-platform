@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const mongoose = require('mongoose');
 const Chef = require('../models/cheff');
 
 router.get('/home',(req,res)=>{
