@@ -52,15 +52,15 @@ router.post('/login', async (req, res) => {
 
         const userExists = await User.findOne({ username: email, password });
         if (!userExists) {
-            return res.status(process.env.FAILED_STATUS).json({ message: "User does not exist" });
+            return res.status(parseInt(process.env.FAILED_STATUS)).json({ message: "User does not exist" });
         }
 
-        res.status(process.env.SUCCESS_STATUS).json({ message: "User logged in successfully", user: userExists });
+        res.status(parseInt(process.env.SUCCESS_STATUS)).json({ message: "User logged in successfully", user: userExists });
 
     } catch (err) {
 
         console.error("Error in login:", err);
-        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+        res.status(parseInt(process.env.SERVER_ERROR)).json({ message: "Internal Server Error" });
 
     }
 
