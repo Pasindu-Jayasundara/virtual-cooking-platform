@@ -57,4 +57,22 @@ router.get('/trending',async (req,res)=>{
 
 });
 
+router.get('/cheffs',async(req,res)=>{
+
+    try{
+
+        const result = await Chef.find({});
+        if (!result) {
+            return res.status(404).json({ message: "No chefs found" });
+        }
+
+        res.status(200).json(result);
+
+    }catch(err){
+        console.error("Error fetching chefs:", err);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+
+});
+
 module.exports = router;
