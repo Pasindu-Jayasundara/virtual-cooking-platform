@@ -6,13 +6,12 @@ const User = require('../models/User');
 
 router.post('/register', async (req, res) => {
 
-    const { name, email, password } = req.body;
-
     try {
+        const { name, email, password } = req.body;
 
         const existingUser = await User.findOne({ username: email });
         if (existingUser) {
-            return res.status(process.env.FAILED_STATUS).json({ message: "User already exists" });
+            return res.status(parseInt(process.env.FAILED_STATUS)).json({ message: "User already exists" });
         }
 
         const newUser = new User({
@@ -24,22 +23,25 @@ router.post('/register', async (req, res) => {
             paymentHistory: [],
             recentlyAccessed: [],
             myTutorials: [],
-            image: "",
+            image: ".",
             cart: []
         });
 
-        await newUser.save((err, user) => {
-            if (err) {
-                console.error("Error saving user:", err);
-                return res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
-            }
-            res.status(process.env.SUCCESS_STATUS).json({ message: "User registered successfully", user });
-        });
+        try {
+            const savedUser  = await newUser .save();
+            console.log('User  saved successfully:', savedUser );
+
+            res.status(parseInt(process.env.SUCCESS_STATUS)).json({ message: "User registered successfully", user: savedUser });
+        
+        } catch (err) {
+            console.error('Error saving user:', err);
+            res.status(parseInt(process.env.SERVER_ERROR)).json({ message: "User registered failed" });
+        }
 
     } catch (err) {
 
         console.error("Error in registration:", err);
-        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+        res.status(parseInt(process.env.SERVER_ERROR)).json({ message: "Internal Server Error" });
 
     }
 
