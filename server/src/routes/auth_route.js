@@ -1,64 +1,73 @@
 const express = require('express');
 const router = express.Router();
+require('dotenv').config();
 
 const User = require('../models/User');
-const mongoose = require('mongoose');
 
-router.post('/register',async (req, res)=>{
-    
-    const {name,email,password} = req.body;
+router.post('/register', async (req, res) => {
 
-    try{
+    const { name, email, password } = req.body;
 
-        const existingUser = await User.findOne({username:email});
-        if(existingUser){
-            return res.status(400).json({message: "User already exists"});
+    try {
+
+        const existingUser = await User.findOne({ username: email });
+        if (existingUser) {
+            return res.status(process.env.FAILED_STATUS).json({ message: "User already exists" });
         }
 
         const newUser = new User({
             name,
-            username:email,
+            username: email,
             password,
-            isChef:false,
-            purchasedTutorials:[],
-            paymentHistory:[],
-            recentlyAccessed:[],
-            myTutorials:[],
-            image:"",
-            cart:[]
+            isChef: false,
+            purchasedTutorials: [],
+            paymentHistory: [],
+            recentlyAccessed: [],
+            myTutorials: [],
+            image: "",
+            cart: []
         });
 
         await newUser.save((err, user) => {
             if (err) {
                 console.error("Error saving user:", err);
-                return res.status(500).json({ message: "Internal Server Error" });
+                return res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
             }
-            res.status(201).json({ message: "User registered successfully", user });
+            res.status(process.env.SUCCESS_STATUS).json({ message: "User registered successfully", user });
         });
 
-    }catch(err){
+    } catch (err) {
 
         console.error("Error in registration:", err);
-        res.status(500).json({ message: "Internal Server Error" });
-        
+        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+
     }
-    
-});
-
-router.post('/login',async (req, res)=>{
-    const {email,password} = req.body;
-
-    const userExists = await User.findOne({username:email, password});
-    if(!userExists){
-        return res.status(400).json({message:"User does not exist"});
-    }
-
-    res.status(200).json({message:"User logged in successfully", user:userExists});
 
 });
 
-router.post('/users',async (req, res)=>{
-    
+router.post('/login', async (req, res) => {
+
+    try {
+        const { email, password } = req.body;
+
+        const userExists = await User.findOne({ username: email, password });
+        if (!userExists) {
+            return res.status(process.env.FAILED_STATUS).json({ message: "User does not exist" });
+        }
+
+        res.status(process.env.SUCCESS_STATUS).json({ message: "User logged in successfully", user: userExists });
+
+    } catch (err) {
+
+        console.error("Error in login:", err);
+        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+
+    }
+
+});
+
+router.post('/users', async (req, res) => {
+
     try {
 
         const response = await User.find({});
@@ -72,15 +81,15 @@ router.post('/users',async (req, res)=>{
             return userWithoutPassword;
         });
 
-        res.status(200).json(filteredResponse);
-        
+        res.status(process.env.SUCCESS_STATUS).json(filteredResponse);
+
     } catch (error) {
 
         console.error("Error fetching users:", error);
-        res.status(500).json({ message: "Internal Server Error" });
-        
+        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+
     }
-    
+
 });
 
 module.exports = router;

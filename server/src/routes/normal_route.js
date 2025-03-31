@@ -4,73 +4,82 @@ const router = express.Router();
 const Chef = require('../models/cheff');
 const Trending = require('../models/Trending');
 
-router.get('/home',async(req,res)=>{
-    
-    const result = await Chef.find({}).sort({soldCount:-1}).limit(3);
-    if (!result) {
-        return res.status(404).json({ message: "No chefs found" });
-    }
+require('dotenv').config();
 
-    res.status(200).json(result);
-    
-});
+router.get('/home', async (req, res) => {
 
-router.get('/top-chefs',async (req,res)=>{
-    
     try {
-        const resultJson = await Chef.find().sort({soldCount:-1}).limit(3);
-        if (!resultJson) {
-            return res.status(404).json({ message: "No chefs found" });
+
+        const result = await Chef.find({}).sort({ soldCount: -1 }).limit(3);
+        if (!result) {
+            return res.status(process.env.FAILED_STATUS).json({ message: "No chefs found" });
         }
 
-        res.status(200).json(resultJson);
+        res.status(process.env.SUCCESS_STATUS).json(result);
+
+    } catch (err) {
+        console.error("Error fetching home data:", err);
+        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+    }
+
+});
+
+router.get('/top-chefs', async (req, res) => {
+
+    try {
+        const resultJson = await Chef.find().sort({ soldCount: -1 }).limit(3);
+        if (!resultJson) {
+            return res.status(process.env.FAILED_STATUS).json({ message: "No chefs found" });
+        }
+
+        res.status(process.env.SUCCESS_STATUS).json(resultJson);
 
     } catch (error) {
         console.error("Error fetching chefs:", error);
-        res.status(500).json({ message: "Internal Server Error" });
+        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
     }
-    
+
 });
 
-router.get('/trending',async (req,res)=>{
+router.get('/trending', async (req, res) => {
 
-    try{
+    try {
 
         const result = await Trending.find().populate({
             path: 'tutorialId',
             model: 'Tutorials',
-            populate:{
-                path:'chef_id',
-                model:'Cheff'
+            populate: {
+                path: 'chef_id',
+                model: 'Cheff'
             }
         });
         if (!result) {
-            return res.status(404).json({ message: "No trending tutorials found" });
+            return res.status(process.env.FAILED_STATUS).json({ message: "No trending tutorials found" });
         }
 
-        res.status(200).json(result);
+        res.status(process.env.SUCCESS_STATUS).json(result);
 
-    }catch(err){
+    } catch (err) {
         console.error("Error fetching trending tutorials:", err);
-        res.status(500).json({ message: "Internal Server Error" });
+        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
     }
 
 });
 
-router.get('/cheffs',async(req,res)=>{
+router.get('/cheffs', async (req, res) => {
 
-    try{
+    try {
 
         const result = await Chef.find({});
         if (!result) {
-            return res.status(404).json({ message: "No chefs found" });
+            return res.status(process.env.FAILED_STATUS).json({ message: "No chefs found" });
         }
 
-        res.status(200).json(result);
+        res.status(process.env.SUCCESS_STATUS).json(result);
 
-    }catch(err){
+    } catch (err) {
         console.error("Error fetching chefs:", err);
-        res.status(500).json({ message: "Internal Server Error" });
+        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
     }
 
 });
