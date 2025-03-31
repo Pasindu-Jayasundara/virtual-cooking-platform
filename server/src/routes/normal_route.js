@@ -3,16 +3,16 @@ const router = express.Router();
 
 const Chef = require('../models/cheff');
 const Trending = require('../models/Trending');
-const { populate } = require('../models/User');
 
 router.get('/home',async(req,res)=>{
     
-    await Chef.find
-    
-});
+    const result = await Chef.find({}).sort({soldCount:-1}).limit(3);
+    if (!result) {
+        return res.status(404).json({ message: "No chefs found" });
+    }
 
-router.get('/about',(req,res)=>{
-    res.send('About route');
+    res.status(200).json(result);
+    
 });
 
 router.get('/top-chefs',async (req,res)=>{
