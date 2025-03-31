@@ -1,4 +1,4 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 const objectId = schema.Types.ObjectId;
 

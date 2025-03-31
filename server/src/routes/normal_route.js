@@ -15,7 +15,7 @@ router.get('/home', async (req, res) => {
             return res.status(process.env.FAILED_STATUS).json({ message: "No chefs found" });
         }
 
-        res.status(process.env.SUCCESS_STATUS).json(result);
+        res.status(parseInt(process.env.SUCCESS_STATUS)).json(result);
 
     } catch (err) {
         console.error("Error fetching home data:", err);
