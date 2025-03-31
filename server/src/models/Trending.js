@@ -5,7 +5,7 @@ const objectId = schema.Types.ObjectId;
 const trendingSchema = new schema({
     tutorialId:{
         type:objectId,
-        required:true
+        required:true,
     }
 });
 

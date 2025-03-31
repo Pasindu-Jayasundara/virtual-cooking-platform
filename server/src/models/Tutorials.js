@@ -39,9 +39,9 @@ const tutorialSchema = new schema({
         type:String,
         required:true
     },
-    chef_id:{
+    chefId:{
         type:objectId,
-        required:true
+        required:true,
     },
     reviews:[reviewSchema]
     

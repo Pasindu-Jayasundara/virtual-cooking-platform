@@ -3,6 +3,7 @@ const router = express.Router();
 
 const Chef = require('../models/cheff');
 const Trending = require('../models/Trending');
+const Tutorial = require('../models/Tutorials');
 
 require('dotenv').config();
 
@@ -30,21 +31,21 @@ router.get('/trending', async (req, res) => {
 
         const result = await Trending.find().populate({
             path: 'tutorialId',
-            model: 'Tutorials',
-            populate: {
-                path: 'chef_id',
-                model: 'Cheff'
+            model: Tutorial,
+            populate:{
+                path:'chefId',
+                model:Chef
             }
         });
         if (!result) {
-            return res.status(process.env.FAILED_STATUS).json({ message: "No trending tutorials found" });
+            return res.status(parseInt(process.env.FAILED_STATUS)).json({ message: "No trending tutorials found" });
         }
 
-        res.status(process.env.SUCCESS_STATUS).json(result);
+        res.status(parseInt(process.env.SUCCESS_STATUS)).json(result);
 
     } catch (err) {
         console.error("Error fetching trending tutorials:", err);
-        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+        res.status(parseInt(process.env.SERVER_ERROR)).json({ message: "Internal Server Error" });
     }
 
 });
