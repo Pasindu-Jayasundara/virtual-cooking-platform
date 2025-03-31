@@ -30,6 +30,10 @@ const CheffSchema = new Schema({
     image: {
         type: String,
         required: true
+    },
+    soldCount:{
+        type: Number,
+        required: true
     }
 });
 module.exports = mongoose.model('Chefs', CheffSchema);
