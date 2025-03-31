@@ -3,6 +3,7 @@ const router = express.Router();
 require('dotenv').config();
 
 const User = require('../models/User');
+const Tutorial = require('../models/Tutorials');
 
 router.post('/register', async (req, res) => {
 
@@ -72,23 +73,20 @@ router.post('/users', async (req, res) => {
 
     try {
 
-        const response = await User.find({});
+        const response = await User.find({}).select('-password').populate({
+            path: 'cart.tutorialId',
+            model: Tutorial,
+        })
         if (!response) {
             return res.status(404).json({ message: "No users found" });
         }
 
-        // Filter out the password field from the response
-        const filteredResponse = response.map(user => {
-            const { password, ...userWithoutPassword } = user._doc; // Exclude the password field
-            return userWithoutPassword;
-        });
-
-        res.status(process.env.SUCCESS_STATUS).json(filteredResponse);
+        res.status(parseInt(process.env.SUCCESS_STATUS)).json(response);
 
     } catch (error) {
 
         console.error("Error fetching users:", error);
-        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+        res.status(parseInt(process.env.SERVER_ERROR)).json({ message: "Internal Server Error" });
 
     }
 
