@@ -14,6 +14,7 @@ const app = express();
 // middleware
 app.use(express.json());
 app.use(cors());
+app.use(express.urlencoded({extended:true}));
 
 // routes
 app.use("/auth", auth_routes);
