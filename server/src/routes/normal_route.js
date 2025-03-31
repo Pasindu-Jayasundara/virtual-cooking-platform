@@ -50,20 +50,20 @@ router.get('/trending', async (req, res) => {
 
 });
 
-router.get('/cheffs', async (req, res) => {
+router.get('/chefs', async (req, res) => {
 
     try {
 
         const result = await Chef.find({});
         if (!result) {
-            return res.status(process.env.FAILED_STATUS).json({ message: "No chefs found" });
+            return res.status(parseInt(process.env.FAILED_STATUS)).json({ message: "No chefs found" });
         }
 
-        res.status(process.env.SUCCESS_STATUS).json(result);
+        res.status(parseInt(process.env.SUCCESS_STATUS)).json(result);
 
     } catch (err) {
         console.error("Error fetching chefs:", err);
-        res.status(process.env.SERVER_ERROR).json({ message: "Internal Server Error" });
+        res.status(parseInt(process.env.SERVER_ERROR)).json({ message: "Internal Server Error" });
     }
 
 });
