@@ -17,10 +17,12 @@ function loadTrending() {
     
             for (var id in trendingArray) {
         
+                        // <div class="search-card-head" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});" onclick="gotolesson(${card.id});">
+
                 var card = trendingArray[id];
                 var trendingCard = `
                     <div class="search-card trending-search-card">
-                        <div class="search-card-head" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});" onclick="gotolesson(${card.id});">
+                        <div class="search-card-head" style="background-image:url(${card.image});" onclick="gotolesson(${card.id});">
                             <div class="trending-mark">Flash</div>
                         </div>
                         <div class="search-card-body">

@@ -18,6 +18,8 @@ function loadCartCards(){
                 if(element.id == lessonId){
                     console.log(element.id);
 
+                            // <div class="cart-card-header" style="background-image:url(${element.image.replace("..","/uor_web_sem1_gpp")});" onclick="gotolesson(${element.id});"></div>
+
                     var cartCard = `
                         <div class="cart-card">
                             <div class="cart-card-header" style="background-image:url(${element.image.replace("..","/uor_web_sem1_gpp")});" onclick="gotolesson(${element.id});"></div>
