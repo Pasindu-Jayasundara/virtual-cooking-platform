@@ -127,7 +127,7 @@ function loadChefDetails(id) {
 
   document.getElementById("cpChefName").innerHTML = chef.name;
   document.getElementById("cpChefDesc").innerHTML = chef.desc;
-  document.getElementById("cpChefImage").style.backgroundImage = "url(" + chef.image.replace("..","/uor_web_sem1_gpp") + ")";
+  document.getElementById("cpChefImage").style.backgroundImage = "url(" + chef.image.replace("..","/virtual-cooking-platform") + ")";
 
 }
 
@@ -152,7 +152,7 @@ function loadChefTutorials(id){
       var card = chefTutorialArr[cardId];
       var chefTutorialCard = `
               <div class="search-card" onclick="goToTutorial(${card.id});">
-                  <div class="search-card-head" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});"></div>
+                  <div class="search-card-head" style="background-image:url(${card.image.replace("..","/virtual-cooking-platform")});"></div>
                   <div class="search-card-body">
   
                       <div class="search-card-body-first">

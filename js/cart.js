@@ -22,7 +22,7 @@ function loadCartCards(){
 
                     var cartCard = `
                         <div class="cart-card">
-                            <div class="cart-card-header" style="background-image:url(${element.image.replace("..","/uor_web_sem1_gpp")});" onclick="gotolesson(${element.id});"></div>
+                            <div class="cart-card-header" style="background-image:url(${element.image.replace("..","/virtual-cooking-platform")});" onclick="gotolesson(${element.id});"></div>
                             <div class="cart-card-body">
                                 <div class="cart-cource-name-and-by">
                                     <div class="cart-card-title">${element.name}</div>

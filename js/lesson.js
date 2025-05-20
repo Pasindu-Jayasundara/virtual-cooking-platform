@@ -131,7 +131,7 @@ function loadLessonReviews(){
                 
                 var reviewCard = `
                     <div class="lesson-comment">
-                        <div class="lesson-comment-user-image" style="background-image:url('/uor_web_sem1_gpp/resources/images/emptyProfile.png');"></div>
+                        <div class="lesson-comment-user-image" style="background-image:url('/virtual-cooking-platform/resources/images/emptyProfile.png');"></div>
                         <div class="lesson-name-and-comment">
                             <div class="lesson-comment-user-name">${reviewObj.name}</div>
                             <div class="lesson-comment-user-comment">
@@ -170,7 +170,7 @@ function loadSuggestions() {
             var card = lessonArr[id];
             var suggestCard = `
                 <div class="lesson-suggest-1-container" onclick="gotoLesston(${card.id});">
-                    <div class="suggest-lesson-image" style="background-image:url(${card.image.replace("..","/uor_web_sem1_gpp")});"></div>
+                    <div class="suggest-lesson-image" style="background-image:url(${card.image.replace("..","/virtual-cooking-platform")});"></div>
                     <div class="suggest-lesson-name">${card.name}</div>
                 </div>
             `;
