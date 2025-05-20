@@ -1,4 +1,4 @@
-var countdownEnd = new Date('2024-05-31T23:59:59Z').getTime();
+var countdownEnd = new Date('2025-10-31T23:59:59Z').getTime();
 
 var countdownInterval = setInterval(updateCountdown, 1000);
 
