@@ -9,6 +9,7 @@ window.addEventListener("load", function () {
       
       pageUrl = pageUrl.split("?")[1];
       chefId = pageUrl.split("=")[1];
+console.log(chefId);
   }
 
   if (logedInUser == null) {
